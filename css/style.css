@@ -1,0 +1,38 @@
+@import url(navbar.css);
+@import url(footer.css);
+@import url(homepage.css);
+
+/*
+COLOR PALETTES
+#E9E9E9; Greyish White
+#2E2A2A; Greyish Black
+#952322; Darkish Red
+#229495; Greenish Blue
+
+FONT FAMILIES
+font-family: 'Manrope'; "For Headings"
+font-family: 'Dm Sans'; "For Texts and Articles"
+
+FONT WEIGHTS
+Dm Sans
+font-weight: 400;
+font-weight: 700;
+font-weight: 800;
+
+Manrope
+font-weight: 400;
+font-weight: 700;
+font-weight: 800;
+
+FONT SIZES
+font-size: 40px;
+font-size: 32px;
+font-size: 18px;
+font-size: 12px;
+*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
