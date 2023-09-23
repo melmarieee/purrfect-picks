@@ -8,35 +8,16 @@ header{
   justify-content: space-between;
   align-items: center;
   transition: 0.6s;
-  padding: 40px 100px;
+  padding:20px 100px 0px 100px;
   z-index: 1000;
   font-family: 'Manrope';
   font-weight: 800;
-  background-color: transparent;
-}
-header.sticky{
-  padding:20px 100px 10px 100px;
-  background: #952322;
+  background-color: #952322;
 }
 
-header #navbar-logo1{
-  width: 200px;
+#navbar-logo1{
+  width: 180px;
   margin-top: -20px;
-}
-header #navbar-logo2{
-  width: 200px;
-  margin-top: -20px;
-  display: none;
-}
-header.sticky #navbar-logo1{
-  display: none;
-  width: 200px;
-  padding: 10px;
-}
-header.sticky #navbar-logo2{
-  display: block;
-  width: 200px;
-  padding: 10px;
 }
 
 header .navbar-ul{
@@ -54,12 +35,12 @@ header .navbar-ul .navbar-li .navbar-a{
   position: relative;
   margin: 0 15px;
   text-decoration: none;
-  color: #952322;
-  letter-spacing: 2px;
+  color: #ffffff;
+  letter-rgb(255, 255, 255): 2px;
   font-weight: 800;
   transition: 0.2s;
 }
-header.sticky .navbar-logo, header.sticky .navbar-ul .navbar-li .navbar-a{
+header .navbar-logo, header .navbar-ul .navbar-li .navbar-a{
   color: #ffffff;
   transition: 0.2s;
 }
@@ -67,7 +48,7 @@ header .navbar-a:hover {
   border-bottom: solid 0.25em;
   border-color: #952322;
 }
-header.sticky .navbar-a:hover {
+header .navbar-a:hover {
   border-bottom: solid 0.25em;
   border-color: #fff;
 }
@@ -76,26 +57,7 @@ header.sticky .navbar-a:hover {
 }
 
 @media screen and (max-width: 980px) {
-  header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: 0.6s;
-    padding: 40px 60px;
-    z-index: 1000;
-    font-family: 'Manrope';
-    font-weight: 800;
-    background-color: transparent;
-  }
   header .navbar-ul{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 0px;
     font-size: 12px;
   }
@@ -103,50 +65,13 @@ header.sticky .navbar-a:hover {
 
 @media screen and (max-width: 768px) {
   header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: 0.6s;
-    padding: 40px 60px;
-    z-index: 1000;
-    font-family: 'DM Sans';
-    font-weight: 800;
-    background-color: transparent;
+    padding: 20px 20px 0 20px;
   }
-  header.sticky{
-    padding:20px 60px 10px 60px;
-    background: #952322;
-  }
-  
-  header #navbar-logo1{
-    width: 100px;
-    margin-top: -20px;
-  }
-  header #navbar-logo2{
-    width: 100px;
-    margin-top: -20px;
-    display: none;
-  }
-  header.sticky #navbar-logo1{
-    display: none;
-    width: 100px;
-    padding: 10px;
-  }
-  header.sticky #navbar-logo2{
-    display: block;
-    width: 100px;
-    padding: 10px;
+  #navbar-logo1{
+    padding-block: 5px;
   }
   header .navbar-ul{
     display: none;
-  }
-  header.sticky .navbar-menu i{
-    font-size: 1.6rem;
-    color: #fff;
   }
   header .navbar-menu{
     display: block;
@@ -154,7 +79,7 @@ header.sticky .navbar-a:hover {
   }
   .navbar-menu i{
     font-size: 1.6rem;
-    color: #952322;
+    color: #ffffff;
   }
 
 }

@@ -1,0 +1,271 @@
+/* START OF HERO SECTION */
+.subs-hero-section{
+  height: 100%;
+  max-width: 1920px;
+  margin-inline: auto;
+  font-family: 'Manrope';
+}
+.subs-hero-background{
+  background-image: url(/assets/subscription-hero-background.png);
+  background-size: cover;
+  height: 100%;
+  padding: 0px 30px 30px 30px;
+}
+.subs-hero-content-container{
+  margin-inline: auto;
+  width: 90%;
+}
+.subs-hero-heading h1{
+  font-weight: 800;
+  font-size: 300%;
+  padding: 20px;
+}
+.subs-hero-heading p{
+  font-size: 18px;
+}
+.subs-hero-heading{
+  text-align: right;
+  align-items: right;
+}
+.subs-hero-content-container{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.subs-img{
+  width: 40%;
+}
+#pet-survey-button{
+  background-color: #229495;
+  padding: 10px 80px 10px 80px;
+  border: none;
+  border-radius: 20px;
+  transition: 0.6s;
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+  font-weight: 800;
+  font-size: 18px;
+}
+#pet-survey-button:hover{
+  background-color: #952322;
+}
+@media screen and (max-width: 1024px) {
+  .subs-hero-heading h1{
+    font-weight: 800;
+    font-size: 200%;
+    padding: 10px;
+  }
+  .subs-hero-background{
+    padding: 20px 30px 30px 30px;
+  }
+  .subs-hero-content-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+  }
+  .subs-hero-heading{
+    text-align: center;
+    align-items: right;
+  }
+  .subs-img{
+    width: 80%;
+  }
+  #pet-survey-button{
+    background-color: #229495;
+    padding: 10px 60px 10px 60px;
+    border: none;
+    border-radius: 20px;
+    transition: 0.6s;
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    font-weight: 800;
+    font-size: 18px;
+  }
+  #pet-survey-button:hover{
+    background-color: #952322;
+  }
+}
+/* END OF HERO SECTION */
+
+/* START OF PET SECTION */
+.subs-pet-section{
+  background-color: #952322;
+  height: 100%;
+  padding-block: 40px;
+}
+.pet-section-heading h2{
+  color: white;
+  font-size: 32px;
+  font-family: 'Manrope';
+  font-weight: 800;
+  text-align: center;
+}
+.subs-pet-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.pet-section-img-container{
+  display: flex;
+  justify-content: center;
+}
+.pet-section-img{
+  width: 20%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.cat-img:hover{
+  transform: translateX(-15px);
+}
+.dog-img:hover{
+  transform: translateX(15px);
+}
+@media screen and (max-width: 1024px) {
+  .pet-section-img{
+    width: 30%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .pet-section-img{
+    width: 40%;
+  }
+}
+/* END OF PET SECTION */
+
+/* START OF PET SURVEY SECTION */
+#pet-survey-navigator{
+  height: 40px;
+}
+.subs-page-section{
+  height: 100%;
+  padding: 40px;
+}
+.pet-survey-header{
+  color: white;
+  text-align: center;
+  position: relative;
+  background-color: #229495;
+  width: 230px;
+  border-radius: 15px;
+  margin-inline: auto;
+  padding-block: 10px;
+  z-index: 1;
+}
+.pet-survey-container{
+  background-color: #E9E9E9;
+  margin-inline: auto;
+  width: 70%;
+  max-width: 1024px;
+  height: 100%;
+  margin-top: -30px;
+  padding-top: 60px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'DM sans';
+}
+.survey-form-container{
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+}
+.survey-form-container textarea{
+  resize: none;
+  height: 100px;
+}
+.survey-input{
+  width: 50%;
+  height: 30px;
+  border-radius: 2px;
+  border: none;
+  padding-left: 10px;
+}
+.survey-submit-button{
+  margin-inline: auto;
+  display: flex;
+  margin-block: 20px;
+  justify-content: center;
+}
+#submit-button-pet-survey{
+  padding: 5px 40px;
+  border-radius: 20px;
+  border: solid #229495 3px;
+  color: #229495;
+  font-weight: 800;
+  margin-inline: auto;
+  transition: 0.3s;
+}
+#submit-button-pet-survey:hover{
+  background-color: #952322;
+  color: white;
+  border: solid #952322 3px;
+}
+.survey-inputs{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.survey-radio{
+  margin-right: 160px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.survey-checkbox{
+  display: flex;
+  margin-inline: auto;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 1024px) {
+  .survey-form-container{
+    padding-top: 0px;
+  }
+  .survey-inputs{
+    display: flex;
+    flex-direction: column;
+  }
+  .survey-radio{
+    margin-right: 0px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .subs-page-section{
+    padding: 20px;
+  }
+  .pet-survey-container{
+    width: 100%;
+  }
+  .survey-form-container{
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .survey-inputs{
+    max-width: 300px;
+    margin-inline: auto;
+    justify-content: center;
+  }
+  .survey-input{
+    width: 250px;
+    font-size: 12px;
+  }
+  .survey-checkbox{
+    width: 280px;
+    align-items: start;
+  }
+  #checkbox-agree-terms{
+    margin-right: 5px;
+    margin-top: 5px;
+  }
+}
+/* END OF PET SURVEY SECTION */

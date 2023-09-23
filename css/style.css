@@ -1,6 +1,10 @@
 @import url(navbar.css);
 @import url(footer.css);
 @import url(homepage.css);
+@import url(subscription.css);
+@import url(products.css);
+@import url(payment.css);
+@import url(about-us.css);
 
 /*
 COLOR PALETTES
@@ -30,6 +34,7 @@ font-size: 32px;
 font-size: 18px;
 font-size: 12px;
 */
+
 *{
   margin: 0;
   padding: 0;
