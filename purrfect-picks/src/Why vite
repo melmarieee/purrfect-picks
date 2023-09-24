@@ -1,0 +1,9 @@
+Before create-react-app is number boilerplate.
+But now its deprecated.
+
+https://code.pieces.app/blog/create-react-app-alternatives?fbclid=IwAR2Gq7dSc9cuqgrxjw2JhLQbVfCe8r39A7X1x9VtefG2C0nUblNEo8Hkanw#:~:text=Vite%20is%20a%20relatively%20new,alternatives%20to%20Create%20React%20App
+
+Most popular is vite and fastest
+
+Vite is a tool for creating a boilerplate with different javascript frameworks.
+Vite using esbuild for bundling https://esbuild.github.io/

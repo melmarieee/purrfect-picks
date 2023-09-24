@@ -1,0 +1,31 @@
+
+.buttonsubmit{
+    text-align: center;
+    background-color: #229495 !important;
+    border: none;
+    border-radius:20px;
+    width: 130px;
+    padding-block: 3px;
+}
+
+body{
+    background-color:#E9E9E9;
+}
+
+.image-login{
+    padding: 30px 30px;
+}
+
+.logo-container{
+    height: 50px;
+    justify-content: left !important;
+}
+.image-left-container{
+    background-color: #229495;
+    height:100vh
+}
+.bottom-pic-container {
+    align-items: flex-start;
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,46 @@
+.login-container{
+    width: 100%;
+    background-color: #E9E9E9;
+    border-radius: 10px;
+}
+.buttonsubmit{
+    text-align: center;
+    background-color: #952322 !important;
+    border: none;
+    width: 130px;
+    padding-block: 3px;
+    border-radius: 20px;
+    justify-content: left !important;
+}
+.login-form-contaniner {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+.image-login{
+    padding: 30px 30px;
+    background-color: #952322;
+    height: 100vh;
+}
+
+.enter-details-font {
+    color: gray ;
+    font-size: 14px;
+}
+body{
+    background-color:#E9E9E9;
+}
+
+.login-bg-container{
+ width: 100%;
+}
+
+.bot-pic-rotate {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+a{
+    color: gray !important;
+    text-decoration: none;
+}
