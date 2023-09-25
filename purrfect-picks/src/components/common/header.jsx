@@ -1,11 +1,14 @@
-import '../css/navbar.css'
+import '../../css/navbar.css'
+import Logo from "../../assets/purfectLogo.png"
+import LogoWhite from "../../assets/purfectLogoWhite.png"
+
 
 const Header = () => {
     return(
         <header>
             <a href="index.html" className="navbar-logo">
-                <img src="assets/purfectLogo.png" alt="purrfect-picks-logo" id="navbar-logo1"/>
-                <img src="assets/purfectLogoWhite.png" alt="purrfect-picks-logo" id="navbar-logo2"/>
+                <img src={Logo} alt="purrfect-picks-logo" id="navbar-logo1"/>
+                <img src={LogoWhite} alt="purrfect-picks-logo" id="navbar-logo2"/>
             </a>
             <ul className="navbar-ul">
             <li className="navbar-li"><a href="subscription.html" className="navbar-a">Subscriptions</a></li>
