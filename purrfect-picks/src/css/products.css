@@ -1,0 +1,128 @@
+.products-section{
+  padding: 110px 20px 30px 20px;
+}
+.products-section h1{
+  color: #952322;
+  font-family: 'Manrope';
+  font-weight: 800;
+  text-align: center;
+}
+.instructions-cont{
+  display: flex;
+}
+.instructions-cont img{
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+.instructions-cont p{
+  margin-top: 3px;
+}
+.filter-by-cont{
+  display: flex;
+  justify-content: flex-start;
+  background-color: #FFF;
+  align-items: center;
+  padding: 10px 20px 10px 60px;
+  border-radius: 10px;
+  gap: 10px;
+}
+#all-button{
+  margin-right: 30px;
+}
+#filter-text{
+  margin-block: auto;
+  margin-right: 30px;
+}
+.filter-btn{
+  padding: 5px 30px;
+  border-radius: 10px;
+  text-align: left;
+  background-color: #E9E9E9;
+  color: #2E2A2A;
+}
+#categoryDropdown{
+  font-weight: 600;
+  border: none;
+}
+
+.active-btn{
+  background-color: cadetblue;
+  color: white;
+}
+
+
+
+
+.products-container{
+  margin-top: 15px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-inline: auto;
+  background-color: #FFF;
+  padding: 150px 50px;
+  border-radius: 15px;
+}
+.products-container .prods-card {
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+.products-container .prods-card .cont{
+  width: 250px;
+  height: 200px;
+  transition: 0.7s;
+  border-radius: 20px;
+}
+.products-container .prods-card .cont.prod-img{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  /* transform: translateX(0px); */
+  transition: 0.4s;
+}
+.products-container .prods-card:hover .cont.prod-img{
+  /* transform: translateX(-170px); */
+  border-radius: 20px 20px 0px 0px;
+  opacity: 0;
+}
+.products-container .prods-card .cont.prod-img .prods-content{
+  opacity: 1;
+  transition: 0.4s;
+}
+.products-container .prods-card:hover .cont.prod-img .prods-content{
+  opacity: 1;
+}
+.products-container .prods-card .cont.cont.prod-img .prods-content img{
+  max-width: 250px;
+}
+
+.products-container .prods-card .cont.prod-desc {
+  position: relative;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  /* transform: translateX(0px); */
+  opacity: 0;
+  margin-top: -200px;
+  font-size: 12px;
+}
+.products-container .prods-card:hover .cont.prod-desc{
+  /* transform: translateX(50px); */
+  border-radius: 0px 0px 20px 20px;
+  opacity: 1;
+}
+.products-container .prods-card .cont.prods-content p {
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 1000px) {}
