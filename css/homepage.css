@@ -4,7 +4,7 @@
   margin-inline: auto;
 }
 .hero-container{
-  background-image: url(/assets/home-hero-final.png);
+  background-image: url(../assets/home-hero-final.png);
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -76,7 +76,7 @@
 
 @media screen and (max-width: 768px) {
   .hero-container{
-    background-image: url(/assets/home-hero-final2-bg.png);
+    background-image: url(../assets/home-hero-final2-bg.png);
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -126,7 +126,7 @@
   max-width: 1920px;
   margin-inline: auto;
   font-family: 'Manrope';
-  padding: 30px;
+  padding: 50px 30px;
   background-color: #E9E9E9;
 }
 .products-hero-container{
@@ -205,7 +205,7 @@
 /* END OF PRODUCT SECTION */
 /* START OF FAQS SECTION */
 .faqs-section{
-  height: 600px;
+  height: 700px;
   background: linear-gradient(
     to bottom,
     #fff 0%,
@@ -226,6 +226,7 @@
   font-weight: 800;
 }
 .faqs-container{
+  margin-top: 50px;
   width: 1000px;
   position: relative;
   display: flex;
@@ -254,7 +255,7 @@
 }
 .faqs-container .faqs-card:hover .face.face1{
   background: #952322;
-  transform: translateY(0);
+  transform: translateY(0px);
   border-radius: 20px 20px 0px 0px;
 }
 .faqs-container .faqs-card .face.face1 .faqs-content{
@@ -282,11 +283,11 @@
   align-items: center;
   padding: 20px;
   box-sizing: border-box;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
   transform: translateY(-100px);
 }
 .faqs-container .faqs-card:hover .face.face2{
-  transform: translateY(0);
+  transform: translateY(0px);
   border-radius: 0px 0px 20px 20px;
 }
 .faqs-container .faqs-card .face.face2 content p {
@@ -307,9 +308,13 @@
   color: #fff;
 }
 @media screen and (max-width: 1000px) {
+  #faqs-header{
+    text-align: center;
+    color: #952322;
+  }
   .faqs-section{
     height: 900px;
-    background: #ffffff;
+    background: #E9E9E9;
   }
   #faqs-header{
     margin-bottom: 80px;
@@ -382,14 +387,71 @@
 }
 /* END OF FAQS SECTION */
 
-
-
-
-
-
-
-
-
-
-
-
+/* START OF TESTIMONY SECTION */
+.testimony-section{
+  background-color: #E9E9E9;
+  margin-inline: auto;
+}
+.testimony-header-container{
+  padding: 40px 100px;
+  text-align: center;
+}
+.testimony-header-container h2{
+  color: #2E2A2A;
+  font-family: 'Manrope';
+  font-weight: 600;
+}
+.testimonies-container{
+  padding: 40px 30px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1440px;
+  margin-inline: auto;
+}
+.img-name-star-container img{
+  width: 100%;
+  max-width: 50px;
+  border-radius: 50%;
+  border: 1px solid #2E2A2A;
+}
+.img-name-star-container{
+  display: flex;
+  max-height: 50px;
+}
+.name-star-container{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+.star-container{
+  margin-top: -15px;
+  color: orange;
+}
+.review-container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 20%;
+  min-width: 450px;
+  border-radius: 15px;
+  padding: 10px;
+  background-color: #ffffff;
+}
+@media screen and (max-width: 1024px) {
+  .review-container{
+    min-width: 350px;
+  }
+}
+@media screen and (max-width: 525px) {
+  .review-container{
+    min-width: 280px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .testimony-header-container{
+    padding: 30px 10px;
+  }
+}
+/* END OF TESTIMONY SECTION */
