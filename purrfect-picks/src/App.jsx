@@ -1,5 +1,5 @@
 import './App.css'
-import Login from './components/login'
+import Index from './components/index'
 
 function App() {
 
@@ -8,7 +8,7 @@ function App() {
       <div>
         {/* <Signup/> */}
         {/* <Login/> */}
-        {/* { <index/>} */}
+         <Index/>
       </div>
     </>
   )
