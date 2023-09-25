@@ -1,4 +1,7 @@
 import '../css/homepage.css'
+import Header from './common/header'
+import Footer from './common/footer'
+
 import homeHeroFinal2 from '../assets/home-hero-final2.png'
 import productsInBox from '../assets/products-in-box.png'
 import img1 from '../assets/img1.png'
@@ -12,6 +15,7 @@ import piolo from '../assets/piolo.png'
 const Index = () => {
     return(
       <div>
+        <Header/>
         <section class="hero-section">
 
             <div class="hero-container">
@@ -193,6 +197,7 @@ const Index = () => {
 					</div>
 				  </div>
 				</section>
+        <Footer/>
       </div>
     )
 }

@@ -1,4 +1,7 @@
 import '../css/about-us.css'
+import Header from './common/header'
+import Footer from './common/footer'
+
 import partner1 from '../assets/partner1-img.png'
 import partner2 from '../assets/partner2-img.png'
 
@@ -6,7 +9,7 @@ import partner2 from '../assets/partner2-img.png'
 const AboutUs = () => {
     return(
       <div>
-
+        <Header/>
         <main class="about-us-section">
           <h1>ABOUT</h1>
           <div class="about-us-description-container">
@@ -29,7 +32,7 @@ const AboutUs = () => {
           </div>
             
         </main>
-
+        <Footer/>
       </div>
     )
 }

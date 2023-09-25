@@ -1,4 +1,7 @@
 import '../css/products.css'
+import Header from './common/header'
+import Footer from './common/footer'
+
 import instIcon from '../assets/inst-icon.png'
 import dogFood from '../assets/dogFood.png'
 import puppyFood from '../assets/puppyFood.png'
@@ -11,6 +14,7 @@ import petVits from '../assets/petVits.png'
 const Products = () => {
     return(
       <div>
+        <Header/>
         <main className="products-section">
           <h1>PRODUCTS</h1>
 
@@ -161,6 +165,7 @@ const Products = () => {
 
 
         </main>
+        <Footer/>
       </div>
     )
 }

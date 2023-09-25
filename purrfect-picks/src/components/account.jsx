@@ -1,5 +1,6 @@
 import '../css/account.css'
 import Header from './common/header'
+import Footer from './common/footer'
 
 const Account = () => {
     return(
@@ -23,6 +24,7 @@ const Account = () => {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </div>
     )
 }

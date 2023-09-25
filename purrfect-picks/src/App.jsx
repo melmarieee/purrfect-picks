@@ -21,7 +21,7 @@ function App() {
               <Route path="/account" element={<Account/>} />
               <Route index element={<Index/>} />
               <Route path="/payment" element={<Payment/>} />
-              <Route path="/product" element={<Products/>} />
+              <Route path="/products" element={<Products/>} />
               <Route path="/aboutus" element={<AboutUs/>} />
           </Routes>
         </BrowserRouter>

@@ -1,25 +1,27 @@
 import '../../css/navbar.css'
-import Logo from "../../assets/purfectLogo.png"
 import LogoWhite from "../../assets/purfectLogoWhite.png"
 
 
 const Header = () => {
     return(
         <header>
-            <a href="index.html" className="navbar-logo">
-                <img src={Logo} alt="purrfect-picks-logo" id="navbar-logo1"/>
-                <img src={LogoWhite} alt="purrfect-picks-logo" id="navbar-logo2"/>
+            
+            <a href="index.html" class="navbar-logo">
+            <img src={LogoWhite} alt="purrfect-picks-logo" id="navbar-logo1"/>
             </a>
-            <ul className="navbar-ul">
-            <li className="navbar-li"><a href="subscription.html" className="navbar-a">Subscriptions</a></li>
-            <li className="navbar-li"><a href="contact-us.html" className="navbar-a">Contact Us</a></li>
-            <li className="navbar-li"><a href="login.html" className="navbar-a">Login/ Sign Up</a></li>
+
+            <ul class="navbar-ul">
+            <li class="navbar-li"><a href="subscription.html" class="navbar-a">Subscriptions</a></li>
+            <li class="navbar-li"><a href="clinic.html" class="navbar-a">Clinic</a></li>
+            <li class="navbar-li"><a href="about-us.html" class="navbar-a">About Us</a></li>
+            <li class="navbar-li"><a href="login.html" class="navbar-a">Login/ Sign Up</a></li>
             </ul>
-        
-            <div className="navbar-menu">
-                <i className="fa-solid fa-bars"></i>
+
+            <div class="navbar-menu">
+            <i class="fa-solid fa-bars"></i>
             </div>
-      </header>
+
+        </header>
     )
 }
 

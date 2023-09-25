@@ -1,4 +1,7 @@
 import '../css/payment.css'
+import Header from './common/header'
+import Footer from './common/footer'
+
 import gcashLogo from '../assets/gcash-payment-option.png'
 import paymayaLogo from '../assets/paymaya-payment-option.png'
 import bdoLogo from '../assets/bdo-payment-option.png'
@@ -9,6 +12,7 @@ import gcashWhiteLogo from '../assets/gcash-white-logo.png'
 const Payment = () => {
     return(
       <div class="payment-section">
+        <Header/>
         <section class="choose-payment-opt-section">
           <h1 class="payment-opt-header">CHOOSE YOUR PAYMENT OPTION</h1>
 
@@ -87,6 +91,7 @@ const Payment = () => {
           </div>
 
         </section>
+        <Footer/>
       </div>
     )
 }
