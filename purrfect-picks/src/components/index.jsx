@@ -4,6 +4,10 @@ import productsInBox from '../assets/products-in-box.png'
 import img1 from '../assets/img1.png'
 import img2 from '../assets/img2.png'
 import img3 from '../assets/img3.png'
+import lorraine from '../assets/loraine.png'
+import baldonado from '../assets/baldonado.png'
+import kuyaKim from '../assets/kuyakim.png'
+import piolo from '../assets/piolo.png'
 
 const Index = () => {
     return(
@@ -105,6 +109,90 @@ const Index = () => {
           </div>
         </section>
 
+        <section class="testimony-section">
+				  <div class="testimony-header-container">
+					<h2>Trusted by thousands of<br/>subscribed pet owners in the Philippines</h2>
+				  </div>
+
+				  <div class="testimonies-container">
+
+					<div class="review-container">
+					  <div class="img-name-star-container">
+						<img src={lorraine} alt="revews-img"/>
+						<div class="name-star-container">
+						  <p>Lorrainne Joy Ostan</p>
+						  <div class="star-container">
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+						  </div>
+						</div>
+					  </div>
+					  <div class="review-text">
+						<p>“My furry friend eagerly anticipates their monthly surprise, and it's heartwarming to see the joy these boxes bring to their life. Highly recommended! 🐾❤️”</p>
+					  </div>
+					</div>
+
+					
+					<div class="review-container">
+					  <div class="img-name-star-container">
+						<img src={baldonado} alt="revews-img"/>
+						<div class="name-star-container">
+						  <p>Frank Michael Baldonado</p>
+						  <div class="star-container">
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+						  </div>
+						</div>
+					  </div>
+					  <div class="review-text">
+						<p>"Signing up for a pet subscription has been a game-changer. It's not only convenient but ensures my pet receives quality supplies and treats regularly, making both of us happier and healthier"</p>
+					  </div>
+					</div>
+
+					<div class="review-container">
+					  <div class="img-name-star-container">
+						<img src={kuyaKim} alt="revews-img"/>
+						<div class="name-star-container">
+						  <p>Kuya Kim Atienza</p>
+						  <div class="star-container">
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+						  </div>
+						</div>
+					  </div>
+					  <div class="review-text">
+						<p>"Since subscribing to the pet service, my beloved fur baby has never been happier or healthier. The convenience of receiving top-quality pet essentials at my doorstep has made pet care a breeze”</p>
+					  </div>
+					</div>
+					<div class="review-container">
+					  <div class="img-name-star-container">
+						<img src={piolo} alt="revews-img"/>
+						<div class="name-star-container">
+						  <p>Piolo Pascual</p>
+						  <div class="star-container">
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+							<span class="fa fa-star checked"></span>
+						  </div>
+						</div>
+					  </div>
+					  <div class="review-text">
+						<p>"Thanks to our pet subscription, our furry family member is always well taken care of with a constant supply of high-quality products, and it has made our lives as pet parents so much easier and stress-free"</p>
+					  </div>
+					</div>
+				  </div>
+				</section>
       </div>
     )
 }
