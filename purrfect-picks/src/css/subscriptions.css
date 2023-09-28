@@ -1,0 +1,118 @@
+/* .subscription-section{
+  padding: 90px 20px;
+  width: 100%;
+}
+.subscription-section h1{
+  text-align: center;
+  padding-bottom: 30px;
+  color: #952322;
+  font-family: 'Manrope';
+  font-weight: 800;
+}
+.choose-pet-container{
+  font-size: 18px;
+}
+.choose-pet-container select{
+  padding-block: 5px;
+  background-color: transparent;
+  border: none;
+  margin-left: 20px;
+  padding-inline: 20px;
+}
+.filters-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.subs-filter{
+  background-color: white;
+  display: flex;
+  padding-top: 15px;
+  padding-right: 20px;
+  border-radius: 10px;
+}
+.subscription-section ol{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.subscription-section ol li{
+  list-style: none;
+  background: #eee;
+  padding: 5px 20px;
+  margin: 5px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: 'DM Sans';
+}
+.subscription-section ol li.active-button{
+  background-color: cadetblue;
+  color: #FFF;
+}
+.producct{
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+} */
+/* .producct .itemBox{
+  position: relative;
+  width: 400px;
+  margin: 5px;
+  display: block;
+}
+.producct .itemBox.hide{
+  display:none;
+}
+
+.producct .itemBox img{
+  /* position: absolute; */
+  /* width: 100%;
+  max-width: 100px; */
+  /* height: 50%; */
+  /* object-fit: cover;
+} */ 
+
+/* .itemBox{
+  margin-top: 20px;
+  width: 40%;
+}
+.subs-container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFF;
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid #2e2a2ad1;
+}
+.row1-container{
+  display: flex;
+  font-size: 12px;
+}
+
+.row1-container img{
+  width: 35%;
+  height: 35%;
+}
+.row2-container{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  font-size: 12px;
+}
+.subs-heading{
+  font-weight: 600;
+  font-size: 18px;
+} */
+
+

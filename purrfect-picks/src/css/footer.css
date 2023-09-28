@@ -5,6 +5,7 @@ footer{
   font-size: 18px;
   font-family: 'DM sans';
   color: white;
+  z-index: -1;
 }
 footer a{
   color: white !important;
