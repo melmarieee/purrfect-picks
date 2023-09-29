@@ -16,10 +16,9 @@ const Carts = (props) => {
     const [prev_but_index, setPrevButIndex] = useState(
         carts.map((_) => true)
     );
-    let checkCart = ""
-    
-
     const [modal, setModal] = useState(false);
+    const shipping_fee = 65;
+    let checkCart = ""
 
     const toggleModalClose = () => {
         setModal(!modal)
@@ -29,8 +28,6 @@ const Carts = (props) => {
         setActiveCartIndex(target_index)
         toggleModalClose()
     }
-
-    
 
     const appendCart = (index) => {
         // Carts Index
@@ -54,6 +51,7 @@ const Carts = (props) => {
             setPrevButIndex(new_prev_but_index)
         }
     }
+
 
     const removeItemCart = () => {
         setCarts(
@@ -132,7 +130,7 @@ const Carts = (props) => {
                                             <p>Subtotal ({carts.length} items)</p>
                                         </div>
                                         <div class="col-md-6">
-                                            <span>₱ 944.37</span>
+                                            <span>₱ {carts.reduce((sum, cart) => sum + cart.price, 0) }</span>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -140,7 +138,7 @@ const Carts = (props) => {
                                             <p>Shipping Details</p>
                                         </div>
                                         <div class="col-md-6">
-                                            <span>₱ 60</span>
+                                            <span>₱ {shipping_fee}</span>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -148,7 +146,7 @@ const Carts = (props) => {
                                             <p>Total</p>
                                         </div>
                                         <div class="col-md-6">
-                                            <span>₱ 1044.67</span>
+                                            <span>₱ {carts.reduce((sum, cart) => sum + cart.price, 0) + shipping_fee }</span>
                                         </div>
                                     </div>
                                 </div>

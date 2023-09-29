@@ -1,27 +1,83 @@
 import '../../css/navbar.css'
 import LogoWhite from "../../assets/purfectLogoWhite.png"
+import React, {useState, useEffect} from 'react';
+import {
+    Collapse,
+    Navbar,
+    NavbarToggler,
+    NavbarBrand,
+    Nav,
+    NavItem,
+    NavLink,
+    UncontrolledDropdown,
+    DropdownToggle,
+    DropdownMenu,
+    DropdownItem,
+    NavbarText,
+  } from 'reactstrap';
+
+  
 
 
-const Header = () => {
+const Header = (args) => {
+    const [isOpen, setIsOpen] = useState(false);
+    const toggle = () => setIsOpen(!isOpen)
+
+
+    const [deviceWidth, _] = useState(
+        window.screen.width >= 764
+    )
     return(
-        <header>
-            <a href="/" class="navbar-logo">
-            <img src={LogoWhite} alt="purrfect-picks-logo" id="navbar-logo1"/>
-            </a>
+        <div>
+           <Navbar className='header' expand={deviceWidth} {...args}>
+                <a href="/" class="navbar-logo">
+                    <img src={LogoWhite} alt="purrfect-picks-logo" id="navbar-logo1"/>
+                </a>
+            <NavbarToggler onClick={toggle} />
+            <Collapse isOpen={isOpen} navbar>
+            <Nav className="me-auto" navbar>
+                <NavItem>
+                    <NavLink href="/subscriptions">Subscriptions</NavLink>
+                </NavItem>
+                <NavItem>
+                    <NavLink href="/products">Products</NavLink>
+                </NavItem>
+                <NavItem>
+                    <NavLink href="/clinic">Clinic</NavLink>
+                </NavItem>
+                <NavItem>
+                    <NavLink href="/login">Login/Signup</NavLink>
+                </NavItem>
+            </Nav>
+            </Collapse>
+            </Navbar>
+      </div>
 
-            <ul class="navbar-ul">
-            <li class="navbar-li"><a href="/subscriptions" class="navbar-a">Subscriptions</a></li>
-            <li class="navbar-li"><a href="/products" class="navbar-a">Products</a></li>
-            <li class="navbar-li"><a href="/clinic" class="navbar-a">Clinic</a></li>
-            <li class="navbar-li"><a href="/login" class="navbar-a">Login/ Sign Up</a></li>
-            </ul>
 
-            <div class="navbar-menu">
-            <i class="fa-solid fa-bars"></i>
-            </div>
 
-        </header>
+
+       
     )
 }
 
 export default Header;
+
+
+
+{/* <NavbarToggler onClick={toggle} />
+                <Collapse isOpen={isOpen} navbar>
+                    <Nav className="me-auto" navbar>
+                    <NavItem>
+                        <NavLink href="/subscriptions">Subscription</NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink href="/products">Products</NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink href="/clinic">Clinic</NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink href="/login">Login/Signup</NavLink>
+                    </NavItem>
+                    </Nav>
+                </Collapse> */}

@@ -1,4 +1,4 @@
- header{
+ .header{
   position: fixed;
   top: 0;
   left: 0;
@@ -19,7 +19,7 @@
   margin-top: -20px;
 }
 
-header .navbar-ul{
+.header .navbar-ul{
   position: relative;
   display: flex;
   justify-content: center;
