@@ -1,6 +1,7 @@
 import '../css/products.css'
 import Header from './common/header'
 import Footer from './common/footer'
+import { useState } from 'react'
 
 import dogFood from '../assets/dogFood.png'
 import puppyFood from '../assets/puppyFood.png'
@@ -10,37 +11,40 @@ import dogTreats from '../assets/dogTreats.png'
 import catTreats from '../assets/catTreats.png'
 import petVits from '../assets/petVits.png'
 import prodsHeroImg from '../assets/product-hero-img.png'
+import { Pets } from '@mui/icons-material'
+
+let xBtn = document.getElementsByClassName('fa-xmark');
 
 const Products = () => {
 
-  // let previewContainer = document.querySelector('.products-preview');
-  // let previewBox = previewContainer.querySelectorAll('.preview');
-  
-  // document.querySelectorAll('.products-container .product').forEach(product =>{
-  //   product.onclick = () =>{
-  //     previewContainer.style.display = 'flex';
-  //     let name = product.getAttribute('data-name');
-  //     previewBox.forEach(preview =>{
-  //       let target = preview.getAttribute('data-target');
-  //       if(name == target){
-  //         preview.classList.add('active');
-  //       }
-  //     });
-  //   };
-  // });
-  
-  // previewBox.forEach(close =>{
-  //   close.querySelector('.fa-times').onclick = () =>{
-  //     close.classList.remove('active');
-  //     previewContainer.style.display = 'none';
-  //   };
-  // });
+  const[showProductHere, previewProduct] = useState('')
+  const showDogProd = () => {
+    previewProduct(<DogFoodProd/>)
+  }
+  const showCatProd = () => {
+    previewProduct(<CatFoodProd/>)
+  }
+  const showPuppyProd = () => {
+    previewProduct(<PuppyFoodProd/>)
+  }
+  const showKittenProd = () => {
+    previewProduct(<KittenFoodProd/>)
+  }
+  const showDogTreatsProd = () => {
+    previewProduct(<DogTreatsProd/>)
+  }
+  const showCatTreatsProd = () => {
+    previewProduct(<CatTreatsProd/>)
+  }
+  const showPetVitsProd = () => {
+    previewProduct(<showPetVitsProd/>)
+  }
+
 
     return(
-
-
       <div>
         <Header/>
+        {showProductHere}
         <main class="products-section">
 
           <div className="hero-prods-container">
@@ -52,6 +56,7 @@ const Products = () => {
             </div>
             <img src={prodsHeroImg} alt="purrfect-picks-hero-img" id='prodHeroImg'/>
           </div>
+          
 
           <div class="container">
 
@@ -60,189 +65,205 @@ const Products = () => {
                 <div class="product dog-products" data-name="p-1" data-item="dog-products">
                   <img src={dogFood} alt=""/>
                   <h6>Purrpicks dog food</h6>
-                  <div class="view-button">View</div>
+                  <div class="view-button" onClick={showDogProd}>View</div>
                 </div>
 
                 <div class="product cat-products" data-name="p-2" data-item="cat-products">
                   <img src={catFood} alt=""/>
                   <h6>Purrpicks cat food</h6>
-                  <div class="view-button">View</div>
+                  <div class="view-button" onClick={showCatProd}>View</div>
                 </div>
 
                 <div class="product dog-products" data-name="p-3" data-item="dog-products">
                   <img src={puppyFood} alt=""/>
                   <h6>Purrpicks puppy food</h6>
-                  <div class="view-button">View</div>
+                  <div class="view-button" onClick={showPuppyProd}>View</div>
                 </div>
 
                 <div class="product cat-products" data-name="p-4" data-item="cat-products">
                   <img src={kittenFood} alt=""/>
                   <h6>Purrpicks kitten food</h6>
-                  <div class="view-button">View</div>
+                  <div class="view-button" onClick={showKittenProd}>View</div>
                 </div>
 
                 <div class="product dog-products" data-name="p-5" data-item="dog-products">
                   <img src={dogTreats} alt=""/>
                   <h6>Purrpicks dog treats</h6>
-                  <div class="view-button">View</div>
+                  <div class="view-button" onClick={showDogTreatsProd}>View</div>
                 </div>
 
                 <div class="product cat-products" data-name="p-6" data-item="cat-products">
                   <img src={catTreats} alt=""/>
                   <h6>Purrpicks cat treats</h6>
-                  <div class="view-button">View</div>
+                  <div class="view-button" onClick={showCatTreatsProd}>View</div>
                 </div>
 
                 <div class="product pet-vits" data-name="p-7" data-item="cat-products dog-products">
                   <img src={petVits} alt=""/>
                   <h6>Purrpicks multi-vitamins</h6>
-                  <div class="view-button">View</div>
+                  <div class="view-button" onClick={showPetVitsProd}>View</div>
                 </div>
 
             </div>
 
           </div>
 
-          <div class="products-preview">
-
-            <div class="preview" data-target="p-1">
-                <i class="fas fa-times"></i>
-                <img src={dogFood} alt=""/>
-                <h3>Purrpicks dog food</h3>
-                <div class="stars">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half-alt"></i>
-                  <span>( 213 )</span>
-                </div>
-                <p>Discover the ultimate in canine nutrition with our healthy, well-balanced, organic, hypoallergenic dog food. Crafted with care, it's the perfect blend of premium ingredients designed to keep your furry companion thriving. Say goodbye to allergies and hello to a happier, healthier dog!</p>
-                <div class="price">₱399.00</div>
-                <div class="buttons">
-                  <a href="#" class="cart">add to subscription box</a>
-                </div>
-            </div>
-
-            <div class="preview" data-target="p-2">
-                <i class="fas fa-times"></i>
-                <img src={catFood} alt=""/>
-                <h3>Purrpicks cat food</h3>
-                <div class="stars">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half-alt"></i>
-                  <span>( 168 )</span>
-                </div>
-                <p>Elevate your feline friend's well-being with our healthy, well-balanced, organic, hypoallergenic cat food. Crafted with care, it's a purr-fect blend of premium ingredients designed to support your cat's vitality and ensure a happy, allergy-free life. Give your cat the nutrition they deserve!</p>
-                <div class="price">₱399.00</div>
-                <div class="buttons">
-                  <a href="#" class="cart">add to subscription box</a>
-                </div>
-            </div>
-
-            <div class="preview" data-target="p-3">
-                <i class="fas fa-times"></i>
-                <img src={puppyFood} alt=""/>
-                <h3>Purrpicks puppy food</h3>
-                <div class="stars">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half-alt"></i>
-                  <span>( 421 )</span>
-                </div>
-                <p>Introducing our puppy food, the perfect blend of health, balance, and quality. Crafted with care, our organic, hypoallergenic formula ensures your growing pup receives the best nutrition for a strong start in life. Nourish your furry friend with love and pure goodness.</p>
-                <div class="price">₱399.00</div>
-                <div class="buttons">
-                  <a href="#" class="cart">add to subscription box</a>
-                </div>
-            </div>
-
-            <div class="preview" data-target="p-4">
-                <i class="fas fa-times"></i>
-                <img src={kittenFood} alt=""/>
-                <h3>Purrpicks kitten food</h3>
-                <div class="stars">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half-alt"></i>
-                  <span>( 112 )</span>
-                </div>
-                <p>Nurture your little furball's growth with our healthy, well-balanced, organic, hypoallergenic kitten food. Meticulously crafted for your young explorer, it's a delectable blend of premium ingredients, ensuring a strong start in life. Give your kitten the best, naturally!</p>
-                <div class="price">₱399.00</div>
-                <div class="buttons">
-                  <a href="#" class="cart">add to subscription box</a>
-                </div>
-            </div>
-
-            <div class="preview" data-target="p-5">
-                <i class="fas fa-times"></i>
-                <img src={dogTreats} alt=""/>
-                <h3>Purrpicks dog treats</h3>
-                <div class="stars">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half-alt"></i>
-                  <span>( 516 )</span>
-                </div>
-                <p>Indulge your furry friend with our healthy, well-balanced, organic, hypoallergenic dog treats. Crafted with care, these mouthwatering rewards are the perfect blend of premium, allergy-friendly ingredients. Treat your dog to goodness, one bite at a time!</p>
-                <div class="price">₱499.00</div>
-                <div class="buttons">
-                  <a href="#" class="cart">add to subscription box</a>
-                </div>
-            </div>
-
-            <div class="preview" data-target="p-6">
-                <i class="fas fa-times"></i>
-                <img src={catTreats} alt=""/>
-                <h3>Purrpicks cat treats</h3>
-                <div class="stars">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half-alt"></i>
-                  <span>( 246 )</span>
-                </div>
-                <p>Spoil your feline friend with our healthy, well-balanced, organic, hypoallergenic cat treats. Each bite is a delectable blend of premium, allergy-friendly ingredients. Treat your cat to pure goodness, whisker-licking satisfaction guaranteed!</p>
-                <div class="price">₱499.00</div>
-                <div class="buttons">
-                  <a href="#" class="cart">add to subscription box</a>
-                </div>
-            </div>
-
-            <div class="preview" data-target="p-7">
-                <i class="fas fa-times"></i>
-                <img src={petVits} alt=""/>
-                <h3>Purrpicks pet multi-itamins</h3>
-                <div class="stars">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half-alt"></i>
-                  <span>( 86 )</span>
-                </div>
-                <p>Elevate your pet's health with our 10-in-1 Pet Multivitamins! Packed with essential nutrients, these easy-to-administer supplements support your furry friend's vitality, immunity, and overall well-being. One tiny tablet, a world of benefits for your beloved pet!</p>
-                <div class="price">₱599.00</div>
-                <div class="buttons">
-                  <a href="#" class="cart">add to subscription box</a>
-                </div>
-            </div>
-
-          </div>
+          
         </main>
         <Footer/>
       </div>
     )
+}
+
+const AllProductsPreview = () => {
+  return(
+    <>
+  <ProductsPreview
+  prodImg = {dogFood}
+  prodTitle = "Purrpicks Dog Food"
+  prodDesc = "Discover the ultimate in canine nutrition with our healthy, well-balanced, organic, hypoallergenic dog food. Crafted with care, it's the perfect blend of premium ingredients designed to keep your furry companion thriving."/>
+  <ProductsPreview
+  prodImg = {puppyFood}
+  prodTitle = "Purrpicks Dog Food"
+  prodDesc = "Discover the ultimate in canine nutrition with our healthy, well-balanced, organic, hypoallergenic dog food. Crafted with care, it's the perfect blend of premium ingredients designed to keep your furry companion thriving."
+  />
+  <ProductsPreview
+  prodImg = {catFood}
+  prodTitle = "Purrpicks Dog Food"
+  prodDesc = "Discover the ultimate in canine nutrition with our healthy, well-balanced, organic, hypoallergenic dog food. Crafted with care, it's the perfect blend of premium ingredients designed to keep your furry companion thriving."
+  />
+  <ProductsPreview
+  prodImg = {kittenFood}
+  prodTitle = "Purrpicks Dog Food"
+  prodDesc = "Discover the ultimate in canine nutrition with our healthy, well-balanced, organic, hypoallergenic dog food. Crafted with care, it's the perfect blend of premium ingredients designed to keep your furry companion thriving."
+  />
+  <ProductsPreview
+  prodImg = {dogTreats}
+  prodTitle = "Purrpicks Dog Food"
+  prodDesc = "Discover the ultimate in canine nutrition with our healthy, well-balanced, organic, hypoallergenic dog food. Crafted with care, it's the perfect blend of premium ingredients designed to keep your furry companion thriving."
+  />
+  <ProductsPreview
+  prodImg = {catTreats}
+  prodTitle = "Purrpicks Dog Food"
+  prodDesc = "Discover the ultimate in canine nutrition with our healthy, well-balanced, organic, hypoallergenic dog food. Crafted with care, it's the perfect blend of premium ingredients designed to keep your furry companion thriving."
+  />
+  <ProductsPreview
+  prodImg = {petVits}
+    prodTitle = "Purrpicks Dog Food"
+    prodDesc = "Discover the ultimate in canine nutrition with our healthy, well-balanced, organic, hypoallergenic dog food. Crafted with care, it's the perfect blend of premium ingredients designed to keep your furry companion thriving."
+    />
+    </>
+  )
+}
+
+const ProductsPreview = (props) => {
+  const[previewProduct, closeProduct] = useState(true);
+  
+  return(
+    <>
+    {previewProduct ?<div className='preview-container'>
+      <i class="fa-solid fa-xmark" id='xmark' onClick={() => closeProduct(!previewProduct)}></i>
+      <div className="product-preview-container">
+        <img src={props.prodImg} alt="" />
+        <div className="product-preview-contents-container">
+          <h5>{props.prodTitle}</h5>
+          <p>{props.prodDesc}</p>
+
+          
+          <div className="buttons-container">
+          <button id='addtoCartButton' name="addToCart">add to cart</button>
+            <div className="plus-minus-container">
+              <form>
+              <input type="number" name="addToCart" id="itemValue" placeholder='1' min={1} max={99} />
+              </form>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div> : null}
+    </>
+  )
+}
+
+
+const DogFoodProd = () => {
+
+  return(
+    <>
+    <ProductsPreview
+  prodImg = {dogFood}
+  prodTitle = "Purrpicks Dog Food"
+  prodDesc = "Discover the ultimate in canine nutrition with our healthy, well-balanced, organic, hypoallergenic dog food. Crafted with care, it's the perfect blend of premium ingredients designed to keep your furry companion thriving."/>
+    </>
+  )
+}
+const CatFoodProd = () => {
+  return(
+    <>
+      <ProductsPreview
+  prodImg = {catFood}
+  prodTitle = "Purrpicks Dog Food"
+  prodDesc = "Discover the ultimate in canine nutrition with our healthy, well-balanced, organic, hypoallergenic dog food. Crafted with care, it's the perfect blend of premium ingredients designed to keep your furry companion thriving."
+  />
+    </>
+  )
+}
+const PuppyFoodProd = () => {
+  return(
+    <>
+    <ProductsPreview
+  prodImg = {puppyFood}
+  prodTitle = "Purrpicks Dog Food"
+  prodDesc = "Discover the ultimate in canine nutrition with our healthy, well-balanced, organic, hypoallergenic dog food. Crafted with care, it's the perfect blend of premium ingredients designed to keep your furry companion thriving."
+  />
+    </>
+  )
+}
+
+const KittenFoodProd = () => {
+  return(
+    <>
+  <ProductsPreview
+  prodImg = {kittenFood}
+  prodTitle = "Purrpicks Dog Food"
+  prodDesc = "Discover the ultimate in canine nutrition with our healthy, well-balanced, organic, hypoallergenic dog food. Crafted with care, it's the perfect blend of premium ingredients designed to keep your furry companion thriving."
+  />
+    </>
+  )
+}
+const DogTreatsProd = () => {
+  return(
+    <>
+  <ProductsPreview
+  prodImg = {dogTreats}
+  prodTitle = "Purrpicks Dog Food"
+  prodDesc = "Discover the ultimate in canine nutrition with our healthy, well-balanced, organic, hypoallergenic dog food. Crafted with care, it's the perfect blend of premium ingredients designed to keep your furry companion thriving."
+  />
+    </>
+  )
+}
+const CatTreatsProd = (props) => {
+  return(
+    <>
+  <ProductsPreview
+  prodImg = {catTreats}
+  prodTitle = "Purrpicks Dog Food"
+  prodDesc = "Discover the ultimate in canine nutrition with our healthy, well-balanced, organic, hypoallergenic dog food. Crafted with care, it's the perfect blend of premium ingredients designed to keep your furry companion thriving."
+  />
+    </>
+  )
+}
+const PetVitsProd = (props) => {
+  return(
+    <>
+  <ProductsPreview
+  prodImg = {petVits}
+    prodTitle = "Purrpicks Dog Food"
+    prodDesc = "Discover the ultimate in canine nutrition with our healthy, well-balanced, organic, hypoallergenic dog food. Crafted with care, it's the perfect blend of premium ingredients designed to keep your furry companion thriving."
+    />
+    </>
+  )
 }
 
 export default Products;

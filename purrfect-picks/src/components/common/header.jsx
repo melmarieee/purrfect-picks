@@ -12,8 +12,8 @@ const Header = () => {
 
             <ul class="navbar-ul">
             <li class="navbar-li"><a href="subscription.html" class="navbar-a">Subscriptions</a></li>
+            <li class="navbar-li"><a href="products.html" class="navbar-a">Products</a></li>
             <li class="navbar-li"><a href="clinic.html" class="navbar-a">Clinic</a></li>
-            <li class="navbar-li"><a href="about-us.html" class="navbar-a">About Us</a></li>
             <li class="navbar-li"><a href="login.html" class="navbar-a">Login/ Sign Up</a></li>
             </ul>
 

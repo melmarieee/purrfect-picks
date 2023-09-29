@@ -24,7 +24,7 @@ header .navbar-ul{
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 header .navbar-ul .navbar-li{
   position: relative;
@@ -35,7 +35,7 @@ header .navbar-ul .navbar-li .navbar-a{
   margin: 0 15px;
   text-decoration: none;
   color: #ffffff !important;
-  font-weight: 800;
+  font-weight: 600;
   transition: 0.2s;
 }
 header .navbar-logo, header .navbar-ul .navbar-li .navbar-a{
