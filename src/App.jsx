@@ -9,6 +9,7 @@ import Products from './components/products'
 import Account from './components/account'
 import Subscriptions from './components/subscriptions'
 import Cart from './components/cart'
+// import Chatbot from './components/chatbot'
 
 import dogFood from './assets/dogFood.png'
 
@@ -85,6 +86,10 @@ function App() {
       path: "/cart",
       element: <Cart carts={carts}/>,
     },
+    // {
+    //   path: "/chatbott",
+    //   element: <Chatbot/>,
+    // },
   ]);
 
   return (

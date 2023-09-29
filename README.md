@@ -1,9 +1,8 @@
-before create new app is the number 1 recommended in boiler plate.
-but now it is now deprecated in 2023.
-https://code.pieces.app/blog/create-react-app-alternatives#:~:text=Vite%20is%20a%20relatively%20new,alternatives%20to%20Create%20React%20App.
+# React + Vite
 
-i use vite for my boiler plate because its the most popular and fastest bundler beacuse of esbuild bundler.
-<!-- documentation of vite -->
-https://vitejs.dev/guide/
-<!-- bundler -->
-https://esbuild.github.io/
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
