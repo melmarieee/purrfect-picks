@@ -9,7 +9,7 @@ const Login = () => {
             <div class="row">
                 <div class="col-md-6">
                     <div class="login-form-contaniner">
-                        <form action="/home.html" class="row g-3 needs-validation" validate>
+                        <form action="/" class="row g-3 needs-validation" validate>
                             <div class="text-center">
                                 <img src={purfectlogo} alt="purrfect-picks-logo" width="55%" class="pb-5 img-fluid"/>
                             </div>

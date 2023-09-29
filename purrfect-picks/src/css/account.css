@@ -1,4 +1,53 @@
-/* body{
-    padding-top: 300px;
-    padding-left: 20px;
+.account-info{
+    border: solid 2px;
+   
+    border-color: #ffff;
+}
+
+.edit-info{
+    text-align:right;
+    cursor: pointer;
+}
+
+.submit-info{
+    text-align: right;
+}
+.submit1-info{
+    background-color: #229495;
+    border: none;
+    border-radius: 5px;
+}
+.button-container{
+    border-radius: 10px;
+    text-align: center;
+    border-color:solid gray;
+}
+/* .pet1-info{
+    width: 50%;
+}
+.pet2-info{
+    text-align: left;
 } */
+.table-container{
+    border: solid 2px gray;
+}
+
+/* .pet1-container{
+     border-radius: 50px;
+     border: solid 2px gray;
+     flex-direction: row;
+     display: flex;
+     flex-direction: row !important;
+     width: 47%;
+     margin-bottom: 25px;
+} */
+
+
+.buttonsubmit{
+    text-align: center;
+    color: white;
+    background-color: #229495 !important;
+    border-radius:20px;
+    /* width: 130px; */
+    padding-block: 3px;
+}

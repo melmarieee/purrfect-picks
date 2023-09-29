@@ -19,7 +19,7 @@ const Signup = () => {
                             <small className="text-muted px-3 mt-1">Already have an account? </small>
                             <button type="button" className="btn btn-outline-secondary btn-sm rounded">Sign In</button>
                         </div>
-                        <form action="/index.html" className="row g-3 p-4" validate>
+                        <form action="/login" className="row g-3 p-4" validate>
                             <div className="mb-3">
                                 <h2 className="h2"><b>Welcome Hooman!</b></h2>
                                 <small className="text-muted">Register your account</small>
