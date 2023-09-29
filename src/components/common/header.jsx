@@ -5,7 +5,7 @@ import LogoWhite from "../../assets/purfectLogoWhite.png"
 const Header = () => {
     return(
         <header>
-            <a href="index.html" class="navbar-logo">
+            <a href="/" class="navbar-logo">
             <img src={LogoWhite} alt="purrfect-picks-logo" id="navbar-logo1"/>
             </a>
 

@@ -10,7 +10,7 @@ const Signup = () => {
                 <div className="row">
                     <div class="col-md-6 image-left-container bottom-pic-container">
                         <div className="text-center pt-5">
-                            <img src={purfectlogo} alt="purrfect-picks-logo" width="30%"/>
+                            <a href="/"><img src={purfectlogo} alt="purrfect-picks-logo" width="30%"/></a>
                             <img src={signupBG} alt="logo" className="img-fluid bot-pic-rotate" width="100%"/>
                         </div>
                     </div>
