@@ -40,7 +40,7 @@ body{
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
 }
-a{
-    color: gray !important;
+.login-bg-container a{
+    color: gray;
     text-decoration: none;
 }
