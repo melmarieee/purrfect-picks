@@ -1,13 +1,16 @@
 footer{
   position: relative;
+  width: 100%;
   background-color: #2E2A2A;
   padding: 50px 20px 10px 20px;
   font-size: 18px;
   font-family: 'DM sans';
   color: white;
+  z-index: 0;
 }
 footer a{
-  color: white !important;
+  color: white;
+
 }
 footer h5{
   font-size: 18px;

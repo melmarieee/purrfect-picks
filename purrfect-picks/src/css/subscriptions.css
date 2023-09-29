@@ -1,0 +1,158 @@
+.subscription-section{
+  padding: 80px 20px;
+}
+.subs-header{
+  text-align: center;
+  font-weight: 800;
+  font-family: 'Manrope';
+  color: #952322;
+}
+.choose-pet-container{
+  margin-bottom: 10px;
+}
+.filters-container{
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  margin-inline: auto;
+  background-color: white;
+  padding: 10px 40px 0px;
+  border-radius: 5px;
+  align-items: center;
+}
+#pet-name{
+  border: none;
+  margin-left: 20px;
+  padding-inline: 30px;
+  text-align: left;
+}
+.subs-filter ol{
+  display: flex;
+  list-style: none;
+  gap: 15px;
+}
+.filter-btn{
+  background-color: #E9E9E9;
+  padding: 5px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.filter-btn:hover{
+  background-color: cadetblue;
+  color: #FFF;
+}
+.active-button{
+  background-color: cadetblue;
+  color: #FFF;
+}
+.active-btn{
+  background-color: cadetblue;
+  color: #FFF;
+}
+
+.subs-box-container{
+  display: flex;
+  gap: 20px 0px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 30px;
+}
+.SubsBox{
+  width: 40%;
+  background-color: rgba(255, 255, 255, 0.657);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid #2e2a2a;
+}
+.subs-first-row{
+  display: flex;
+  align-items: center;
+}
+.subs-first-row img{
+  width: 180px;
+  height: 180px;
+}
+.subs-second-row{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.subs-second-row button{
+  background-color: #952322;
+  color: #FFF;
+  border-radius: 20px;
+  border: none;
+  padding: 5px 10px;
+}
+
+.subs-details{
+  display: flex;
+  flex-direction: column;
+}
+#billing-colored{
+  color: rgb(0, 0, 212);
+  font-weight: 600;
+}
+@media (max-width:1024px){
+  .filters-container{
+    width: 95%;
+    padding: 10px 15px 0px;
+    flex-wrap: wrap-reverse;
+  }
+  .filter-btn{
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .SubsBox{
+    width: 45%;
+  }
+  .subs-first-row{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    font-size: 12px;
+  }
+  .subs-first-row img{
+    width: 150px;
+    height: 150px;
+    margin-top: -30px;
+  }
+  .subs-second-row h5{
+    font-size: 18px;
+  }
+}
+@media (max-width:768px){
+  .filter-btn{
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+  }
+  .filters-container{
+    justify-content: space-evenly;
+    padding: 10px 5px;
+  }
+  .filters-container ol{
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .choose-pet-container{
+    font-size: 12px;
+  }
+  .subs-box-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .SubsBox{
+    width: 90%;
+  }
+}

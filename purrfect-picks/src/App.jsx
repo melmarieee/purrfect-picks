@@ -8,6 +8,7 @@ import AboutUs from './components/about-us'
 import Payment from './components/payment'
 import Products from './components/products'
 import Account from './components/account'
+import Subscriptions from './components/subscriptions'
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
               <Route path="/payment" element={<Payment/>} />
               <Route path="/products" element={<Products/>} />
               <Route path="/aboutus" element={<AboutUs/>} />
+              <Route path="/subscriptions" element={<Subscriptions/>} />
           </Routes>
         </BrowserRouter>
       </div>

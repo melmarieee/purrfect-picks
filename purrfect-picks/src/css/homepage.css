@@ -391,6 +391,7 @@
 .testimony-section{
   background-color: #E9E9E9;
   margin-inline: auto;
+  position: relative;
 }
 .testimony-header-container{
   padding: 40px 100px;
