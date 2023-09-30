@@ -22,49 +22,49 @@ const product_data = [
     img: dogFood,
     title: "Purrpicks Dog Food",
     description: "Discover the ultimate in canine nutrition with our healthy, well-balanced, organic, hypoallergenic dog food. Crafted with care, it's the perfect blend of premium ingredients designed to keep your furry companion thriving.",
-    price: 699,
+    price: 399,
     service_type: "product",
   },
   {
     img: puppyFood,
-    title: "Purrpicks Dog Food",
-    description: "Discover the ultimate in canine nutrition with our healthy, well-balanced, organic, hypoallergenic dog food. Crafted with care, it's the perfect blend of premium ingredients designed to keep your furry companion thriving.",
-    price: 199,
+    title: "Purrpicks Puppy Food",
+    description: "Introducing our puppy food, the perfect blend of health, balance, and quality. Crafted with care, our organic, hypoallergenic formula ensures your growing pup receives the best nutrition for a strong start in life.",
+    price: 329,
     service_type: "product",
   },
   {
     img: catFood,
-    title: "Purrpicks Dog Food",
-    description: "Discover the ultimate in canine nutrition with our healthy, well-balanced, organic, hypoallergenic dog food. Crafted with care, it's the perfect blend of premium ingredients designed to keep your furry companion thriving.",
-    price: 429,
+    title: "Purrpicks Cat Food",
+    description: "Elevate your feline friend's well-being with our healthy, well-balanced, organic, hypoallergenic cat food. Crafted with care, it's a purr-fect blend of premium ingredients designed to support your cat's vitality and ensure a happy, allergy-free life.",
+    price: 399,
     service_type: "product",
   },
   {
     img: kittenFood,
-    title: "Purrpicks Dog Food",
-    description: "Discover the ultimate in canine nutrition with our healthy, well-balanced, organic, hypoallergenic dog food. Crafted with care, it's the perfect blend of premium ingredients designed to keep your furry companion thriving.",
-    price: 619,
+    title: "Purrpicks Kitten Food",
+    description: "Nurture your little furball's growth with our healthy, well-balanced, organic, hypoallergenic kitten food. Meticulously crafted for your young explorer, it's a delectable blend of premium ingredients, ensuring a strong start in life.",
+    price: 329,
     service_type: "product",
   },
   {
     img: dogTreats,
-    title: "Purrpicks Dog Food",
-    description: "Discover the ultimate in canine nutrition with our healthy, well-balanced, organic, hypoallergenic dog food. Crafted with care, it's the perfect blend of premium ingredients designed to keep your furry companion thriving.",
-    price: 1699,
+    title: "Purrpicks Dog Treats",
+    description: "Indulge your furry friend with our healthy, well-balanced, organic, hypoallergenic dog treats. Crafted with care, these mouthwatering rewards are the perfect blend of premium, allergy-friendly ingredients.",
+    price: 299,
     service_type: "product",
   },
   {
     img: catTreats,
-    title: "Purrpicks Dog Food",
-    description: "Discover the ultimate in canine nutrition with our healthy, well-balanced, organic, hypoallergenic dog food. Crafted with care, it's the perfect blend of premium ingredients designed to keep your furry companion thriving.",
-    price: 3699,
+    title: "Purrpicks Cat Treats",
+    description: "Spoil your feline friend with our healthy, well-balanced, organic, hypoallergenic cat treats. Each bite is a delectable blend of premium, allergy-friendly ingredients.",
+    price: 299,
     service_type: "product",
   },
   {
     img: petVits,
     title: "Purrpicks Vitamins",
-    description: "Discover the ultimate in canine nutrition with our healthy, well-balanced, organic, hypoallergenic dog food. Crafted with care, it's the perfect blend of premium ingredients designed to keep your furry companion thriving.",
-    price: 2699,
+    description: "Elevate your pet's health with our 10-in-1 Pet Multivitamins! Packed with essential nutrients, these easy-to-administer supplements support your furry friend's vitality, immunity, and overall well-being.",
+    price: 299,
     service_type: "product",
   }
 ]
@@ -86,12 +86,12 @@ const Products = () => {
       <div>
         <Header/>
         <Modal isOpen={modal} toggle={toggleModalClose}>
-            <ModalHeader toggle={toggleModalClose}>Buy this product</ModalHeader>
+            <ModalHeader toggle={toggleModalClose} style={{fontSize: '12px'}}><span style={{fontSize: '18px'}}>Buy this product</span></ModalHeader>
             <ModalBody>
               <div >
                 {/* <i class="fa-solid fa-xmark" id='xmark' onClick={() => closeProduct(!previewProduct)}></i> */}
-                <div>
-                  <img class="img-fluid px-5" src={activeModalData ? activeModalData.img : ""} alt="" />
+                <div className='product-modal-container'>
+                  <img class="img-fluid " src={activeModalData ? activeModalData.img : ""} alt="" />
                   <div>
                     <h4 class="pt-4">{activeModalData ? activeModalData.title : ""}</h4>
                     <h4>{activeModalData ? `₱ ${activeModalData.price}` : ""}</h4>
