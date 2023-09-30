@@ -1,5 +1,5 @@
 .products-section{
-  padding: 90px 20px 30px 20px;
+  padding: 30px 20px 30px 20px;
 }
 .hero-prods-container{
    background-color: #229495;
@@ -143,9 +143,24 @@
 .container .products-container .product img{
    width: 100px;
 }
-
+/* 
 .imgmodal{
    width: 100px;
+} */
+.product-modal-container{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.product-modal-container img{
+   width: 300px;
+}
+.product-modal-container p{
+   font-size: 12px;
+}
+.product-modal-container h4{
+   font-size: 18px;
 }
 
 .container .products-container .product:hover img{
