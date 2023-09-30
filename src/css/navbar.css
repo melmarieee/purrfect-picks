@@ -4,79 +4,55 @@
   left: 0;
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: 0.6s;
-  padding:20px 100px 0px 100px;
+  padding:10px 100px 0px 100px;
   z-index: 1000;
   font-family: 'Manrope';
-  font-weight: 800;
+  font-weight: 600;
   background-color: #952322;
+  transition: 0.6s;
 }
-
 #navbar-logo1{
   width: 180px;
-  margin-top: -20px;
+  margin-top: -10px;
+  transition: 0.6s;
 }
-
-.header .navbar-ul{
-  position: relative;
+#navbar-logo1:hover{
+  width: 190px;
+  opacity: 0.8;
+}
+.header-navbar-links{
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1.5rem;
+  gap: 30px;
+  color: white;
+  padding: 15px 0;
 }
-header .navbar-ul .navbar-li{
-  position: relative;
-  list-style: none;
+.ms-auto a{
+  display: none;
 }
-header .navbar-ul .navbar-li .navbar-a{
-  position: relative;
-  margin: 0 15px;
-  text-decoration: none;
-  color: #ffffff !important;
-  font-weight: 600;
-  transition: 0.2s;
-}
-header .navbar-logo, header .navbar-ul .navbar-li .navbar-a{
-  color: #ffffff;
-  transition: 0.2s;
-}
-header .navbar-a:hover {
-  border-bottom: solid 0.25em;
-  border-color: #952322;
-}
-header .navbar-a:hover {
-  border-bottom: solid 0.25em;
-  border-color: #fff;
-}
-.navbar-menu{
+.navbar-toggler{
   display: none;
 }
 
-@media screen and (max-width: 980px) {
-  header .navbar-ul{
-    gap: 0px;
-    font-size: 12px;
+@media screen and (max-width: 840px) {
+  .header{
+    padding:10px 50px 10px 50px;
   }
 }
-
 @media screen and (max-width: 768px) {
-  header{
-    padding: 20px 20px 0 20px;
+  .navbar-toggler{
+    transform: translateX(0px);
+    display: block;
+    border: none;
+    background-color: #FFF;
   }
-  #navbar-logo1{
-    padding-block: 5px;
-  }
-  header .navbar-ul{
+  .header-navbar-links{
     display: none;
   }
-  header .navbar-menu{
-    display: block;
-    margin-top: -20px;
-  }
-  .navbar-menu i{
-    font-size: 1.6rem;
-    color: #ffffff;
+  .ms-auto a{
+    color: #FFF;
+    margin-inline: 5px;
+    padding-bottom: 20px;
+    transition: .3s;
+    display: flex;
   }
 }

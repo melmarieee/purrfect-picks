@@ -33,7 +33,7 @@ const Index = () => {
                   Make your fur friends the happiest of them all by subscribing<br/>
                   to Purrfect Picks! Show them the best love and join us now!
                 </p>
-                  <a href="subscription.html"><button id="home-hero-button">Subscribe</button></a>
+                  <a href="/subscriptions"><button id="home-hero-button">Subscribe</button></a>
                   <a href="#faqs-navigator" id="explore-button"><button id="home-hero-button2">Explore <i class="fa-solid fa-paw"></i></button></a>
               </div>
 
@@ -51,7 +51,7 @@ const Index = () => {
                 crafted our hypoallergenic, natural, complete, and 
                 well-balanced dog and cat food to provide your furry 
                 family members with the finest nutrition available.</p>
-              <a href="products.html"><button id="products-button"><i class="fa-solid fa-arrow-left-long"> </i> Products</button></a>
+              <a href="/products"><button id="products-button"><i class="fa-solid fa-arrow-left-long"> </i> Products</button></a>
             </div>
 
           </div>

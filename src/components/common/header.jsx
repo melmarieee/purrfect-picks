@@ -25,7 +25,7 @@ const Header = (args) => {
 
 
     const [deviceWidth, _] = useState(
-        window.screen.width >= 764
+        window.screen.width <= 768
     )
     return(
         <div>
@@ -33,9 +33,16 @@ const Header = (args) => {
                 <a href="/" class="navbar-logo">
                     <img src={LogoWhite} alt="purrfect-picks-logo" id="navbar-logo1"/>
                 </a>
+                <div className="header-navbar-links">
+                <NavLink href="/subscriptions">Subscriptions</NavLink>
+                <NavLink href="/products">Products</NavLink>
+                <NavLink href="/clinic">Clinic</NavLink>
+                <NavLink href="/login">Login/Signup</NavLink>
+                </div>
+                
             <NavbarToggler onClick={toggle} />
             <Collapse isOpen={isOpen} navbar>
-            <Nav className="me-auto" navbar>
+            <Nav className="ms-auto" navbar>
                 <NavItem>
                     <NavLink href="/subscriptions">Subscriptions</NavLink>
                 </NavItem>
