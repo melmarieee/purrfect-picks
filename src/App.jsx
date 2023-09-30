@@ -9,8 +9,10 @@ import Products from './components/products'
 import Account from './components/account'
 import Subscriptions from './components/subscriptions'
 import Cart from './components/cart'
-// import Chatbot from './components/chatbot'
+import Chatbot from './components/chatbot'
 import dogFood from './assets/dogFood.png'
+
+// const Login []
 
 const carts = [
   {
@@ -85,10 +87,10 @@ function App() {
       path: "/cart",
       element: <Cart carts={carts}/>,
     },
-    // {
-    //   path: "/chatbot",
-    //   element: <Chatbot/>,
-    // },
+    {
+      path: "/chatbot",
+      element: <Chatbot/>,
+    },
   ]);
 
   return (

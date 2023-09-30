@@ -62,6 +62,7 @@ const Carts = (props) => {
         )
         toggleModalClose()
     }
+
     if (carts.length == 0) {
         checkCart = (
             <div class="text-center m-5">
@@ -127,10 +128,10 @@ const Carts = (props) => {
                                     <h4>Order Summary</h4>
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <p>Subtotal ({carts.length} items)</p>
+                                            <p>Subtotal ({carts_index.reduce((sum, cart, _) => sum + cart, 0)} items)</p>
                                         </div>
                                         <div class="col-md-6">
-                                            <span>₱ {carts.reduce((sum, cart) => sum + cart.price, 0) }</span>
+                                            <span>₱ {carts.reduce((sum, cart, index) => sum + cart.price *  carts_index[index], 0) }</span>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -146,7 +147,7 @@ const Carts = (props) => {
                                             <p>Total</p>
                                         </div>
                                         <div class="col-md-6">
-                                            <span>₱ {carts.reduce((sum, cart) => sum + cart.price, 0) + shipping_fee }</span>
+                                            <span>₱ {carts.reduce((sum, cart, index) => sum + cart.price * carts_index[index], 0) + shipping_fee }</span>
                                         </div>
                                     </div>
                                 </div>

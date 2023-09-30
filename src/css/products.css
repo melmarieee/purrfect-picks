@@ -144,6 +144,10 @@
    width: 100px;
 }
 
+.imgmodal{
+   width: 100px;
+}
+
 .container .products-container .product:hover img{
    transform: scale(.9);
 }
@@ -212,7 +216,7 @@
    text-align: center;
    margin-top: 20px;
 }
-.preview-container #addtoCartButton{
+#addtoCartButton{
    background-color: cadetblue;
    padding: 5px 30px;
    border-radius: 5px;
@@ -220,6 +224,7 @@
    color: #FFF;
    transition: 0.3s;
 }
+
 .preview-container #addtoCartButton:hover{
    background-color: #952322;
    border: 2px solid #952322;

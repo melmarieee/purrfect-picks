@@ -29,7 +29,7 @@ const Header = (args) => {
     )
     return(
         <div>
-           <Navbar className='header' expand={deviceWidth} {...args}>
+           <Navbar expand={deviceWidth} className='header'  {...args}>
                 <a href="/" class="navbar-logo">
                     <img src={LogoWhite} alt="purrfect-picks-logo" id="navbar-logo1"/>
                 </a>

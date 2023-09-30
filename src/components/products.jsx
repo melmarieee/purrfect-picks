@@ -13,40 +13,103 @@ import petVits from '../assets/petVits.png'
 import prodsHeroImg from '../assets/product-hero-img.png'
 import { Pets } from '@mui/icons-material'
 
+import { Button, Modal, ModalHeader, ModalFooter, ModalBody } from 'reactstrap';
+
 let xBtn = document.getElementsByClassName('fa-xmark');
 
+const product_data = [
+  {
+    img: dogFood,
+    title: "Purrpicks Dog Food",
+    description: "Discover the ultimate in canine nutrition with our healthy, well-balanced, organic, hypoallergenic dog food. Crafted with care, it's the perfect blend of premium ingredients designed to keep your furry companion thriving.",
+    price: 699,
+    service_type: "product",
+  },
+  {
+    img: puppyFood,
+    title: "Purrpicks Dog Food",
+    description: "Discover the ultimate in canine nutrition with our healthy, well-balanced, organic, hypoallergenic dog food. Crafted with care, it's the perfect blend of premium ingredients designed to keep your furry companion thriving.",
+    price: 199,
+    service_type: "product",
+  },
+  {
+    img: catFood,
+    title: "Purrpicks Dog Food",
+    description: "Discover the ultimate in canine nutrition with our healthy, well-balanced, organic, hypoallergenic dog food. Crafted with care, it's the perfect blend of premium ingredients designed to keep your furry companion thriving.",
+    price: 429,
+    service_type: "product",
+  },
+  {
+    img: kittenFood,
+    title: "Purrpicks Dog Food",
+    description: "Discover the ultimate in canine nutrition with our healthy, well-balanced, organic, hypoallergenic dog food. Crafted with care, it's the perfect blend of premium ingredients designed to keep your furry companion thriving.",
+    price: 619,
+    service_type: "product",
+  },
+  {
+    img: dogTreats,
+    title: "Purrpicks Dog Food",
+    description: "Discover the ultimate in canine nutrition with our healthy, well-balanced, organic, hypoallergenic dog food. Crafted with care, it's the perfect blend of premium ingredients designed to keep your furry companion thriving.",
+    price: 1699,
+    service_type: "product",
+  },
+  {
+    img: catTreats,
+    title: "Purrpicks Dog Food",
+    description: "Discover the ultimate in canine nutrition with our healthy, well-balanced, organic, hypoallergenic dog food. Crafted with care, it's the perfect blend of premium ingredients designed to keep your furry companion thriving.",
+    price: 3699,
+    service_type: "product",
+  },
+  {
+    img: petVits,
+    title: "Purrpicks Vitamins",
+    description: "Discover the ultimate in canine nutrition with our healthy, well-balanced, organic, hypoallergenic dog food. Crafted with care, it's the perfect blend of premium ingredients designed to keep your furry companion thriving.",
+    price: 2699,
+    service_type: "product",
+  }
+]
+
 const Products = () => {
+  const [modal, setModal] = useState(false);
+  const [activeModalData, setActiveModalData] = useState(null);
+    
+    const toggleModalClose = () => {
+      setModal(!modal)
+    }
 
-  const[showProductHere, previewProduct] = useState('')
-  const showDogProd = () => {
-    previewProduct(<DogFoodProd/>)
-  }
-  const showCatProd = () => {
-    previewProduct(<CatFoodProd/>)
-  }
-  const showPuppyProd = () => {
-    previewProduct(<PuppyFoodProd/>)
-  }
-  const showKittenProd = () => {
-    previewProduct(<KittenFoodProd/>)
-  }
-  const showDogTreatsProd = () => {
-    previewProduct(<DogTreatsProd/>)
-  }
-  const showCatTreatsProd = () => {
-    previewProduct(<CatTreatsProd/>)
-  }
-  const showPetVitsProd = () => {
-    previewProduct(<showPetVitsProd/>)
-  }
-
+    const toggleModaOpen = (product) => {
+      setActiveModalData(product)
+      setModal(!modal)
+    }
 
     return(
       <div>
         <Header/>
-        {showProductHere}
-        <main class="products-section">
+        <Modal isOpen={modal} toggle={toggleModalClose}>
+            <ModalHeader toggle={toggleModalClose}>Buy this product</ModalHeader>
+            <ModalBody>
+              <div >
+                {/* <i class="fa-solid fa-xmark" id='xmark' onClick={() => closeProduct(!previewProduct)}></i> */}
+                <div>
+                  <img class="img-fluid px-5" src={activeModalData ? activeModalData.img : ""} alt="" />
+                  <div>
+                    <h4 class="pt-4">{activeModalData ? activeModalData.title : ""}</h4>
+                    <h4>{activeModalData ? `₱ ${activeModalData.price}` : ""}</h4>
+                    <p>{activeModalData ? activeModalData.description : ""}</p>
+                    
+                  </div>
+                </div>
+              </div>
+            </ModalBody>
+            <ModalFooter>
+                <Button className="mx-3" color="secondary" onClick={toggleModalClose}>
+                    Cancel
+                </Button>
+                <button id='addtoCartButton' name="addToCart">add to cart</button>
 
+            </ModalFooter>
+        </Modal>
+        <main class="products-section">
           <div className="hero-prods-container">
             <div className='prods-hero-texts'>
               <h1>Quality Products Create<br/>
@@ -56,105 +119,27 @@ const Products = () => {
             </div>
             <img src={prodsHeroImg} alt="purrfect-picks-hero-img" id='prodHeroImg'/>
           </div>
-          
-
           <div class="container">
-
             <div class="products-container">
-
-                <div class="product dog-products" data-name="p-1" data-item="dog-products">
-                  <img src={dogFood} alt=""/>
-                  <h6>Purrpicks dog food</h6>
-                  <div class="view-button" onClick={showDogProd}>View</div>
-                </div>
-
-                <div class="product cat-products" data-name="p-2" data-item="cat-products">
-                  <img src={catFood} alt=""/>
-                  <h6>Purrpicks cat food</h6>
-                  <div class="view-button" onClick={showCatProd}>View</div>
-                </div>
-
-                <div class="product dog-products" data-name="p-3" data-item="dog-products">
-                  <img src={puppyFood} alt=""/>
-                  <h6>Purrpicks puppy food</h6>
-                  <div class="view-button" onClick={showPuppyProd}>View</div>
-                </div>
-
-                <div class="product cat-products" data-name="p-4" data-item="cat-products">
-                  <img src={kittenFood} alt=""/>
-                  <h6>Purrpicks kitten food</h6>
-                  <div class="view-button" onClick={showKittenProd}>View</div>
-                </div>
-
-                <div class="product dog-products" data-name="p-5" data-item="dog-products">
-                  <img src={dogTreats} alt=""/>
-                  <h6>Purrpicks dog treats</h6>
-                  <div class="view-button" onClick={showDogTreatsProd}>View</div>
-                </div>
-
-                <div class="product cat-products" data-name="p-6" data-item="cat-products">
-                  <img src={catTreats} alt=""/>
-                  <h6>Purrpicks cat treats</h6>
-                  <div class="view-button" onClick={showCatTreatsProd}>View</div>
-                </div>
-
-                <div class="product pet-vits" data-name="p-7" data-item="cat-products dog-products">
-                  <img src={petVits} alt=""/>
-                  <h6>Purrpicks multi-vitamins</h6>
-                  <div class="view-button" onClick={showPetVitsProd}>View</div>
-                </div>
-
+                {
+                  product_data.map(
+                    (product, _) => 
+                      <div class="product dog-products" data-name="p-1" data-item="dog-products">
+                        <img src={product.img} alt=""/>
+                        <h6>{product.title}</h6>
+                        <h6>₱ {product.price}</h6>
+                        <div onClick={toggleModaOpen.bind(this, product)} class="view-button">View</div>
+                      </div>
+                  )
+                }
             </div>
-
           </div>
-
-          
         </main>
         <Footer/>
       </div>
     )
 }
 
-const AllProductsPreview = () => {
-  return(
-    <>
-  <ProductsPreview
-  prodImg = {dogFood}
-  prodTitle = "Purrpicks Dog Food"
-  prodDesc = "Discover the ultimate in canine nutrition with our healthy, well-balanced, organic, hypoallergenic dog food. Crafted with care, it's the perfect blend of premium ingredients designed to keep your furry companion thriving."/>
-  <ProductsPreview
-  prodImg = {puppyFood}
-  prodTitle = "Purrpicks Dog Food"
-  prodDesc = "Discover the ultimate in canine nutrition with our healthy, well-balanced, organic, hypoallergenic dog food. Crafted with care, it's the perfect blend of premium ingredients designed to keep your furry companion thriving."
-  />
-  <ProductsPreview
-  prodImg = {catFood}
-  prodTitle = "Purrpicks Dog Food"
-  prodDesc = "Discover the ultimate in canine nutrition with our healthy, well-balanced, organic, hypoallergenic dog food. Crafted with care, it's the perfect blend of premium ingredients designed to keep your furry companion thriving."
-  />
-  <ProductsPreview
-  prodImg = {kittenFood}
-  prodTitle = "Purrpicks Dog Food"
-  prodDesc = "Discover the ultimate in canine nutrition with our healthy, well-balanced, organic, hypoallergenic dog food. Crafted with care, it's the perfect blend of premium ingredients designed to keep your furry companion thriving."
-  />
-  <ProductsPreview
-  prodImg = {dogTreats}
-  prodTitle = "Purrpicks Dog Food"
-  prodDesc = "Discover the ultimate in canine nutrition with our healthy, well-balanced, organic, hypoallergenic dog food. Crafted with care, it's the perfect blend of premium ingredients designed to keep your furry companion thriving."
-  />
-  <ProductsPreview
-  prodImg = {catTreats}
-  prodTitle = "Purrpicks Dog Food"
-  prodDesc = "Discover the ultimate in canine nutrition with our healthy, well-balanced, organic, hypoallergenic dog food. Crafted with care, it's the perfect blend of premium ingredients designed to keep your furry companion thriving."
-  />
-  <ProductsPreview
-  prodImg = {petVits}
-    prodTitle = "Purrpicks Dog Food"
-    prodDesc = "Discover the ultimate in canine nutrition with our healthy, well-balanced, organic, hypoallergenic dog food. Crafted with care, it's the perfect blend of premium ingredients designed to keep your furry companion thriving."
-    />
-    </>
-  )
-}
 
 const ProductsPreview = (props) => {
   const[previewProduct, closeProduct] = useState(true);
@@ -168,7 +153,6 @@ const ProductsPreview = (props) => {
         <div className="product-preview-contents-container">
           <h5>{props.prodTitle}</h5>
           <p>{props.prodDesc}</p>
-
           
           <div className="buttons-container">
           <button id='addtoCartButton' name="addToCart">add to cart</button>
@@ -177,7 +161,6 @@ const ProductsPreview = (props) => {
               <input type="number" name="addToCart" id="itemValue" placeholder='1' min={1} max={99} />
               </form>
             </div>
-            
           </div>
         </div>
       </div>
