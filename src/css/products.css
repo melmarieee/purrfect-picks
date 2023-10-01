@@ -1,3 +1,6 @@
+.prods #prods{
+   border-bottom: solid 2px #FFF;
+}
 .products-section{
   padding: 30px 20px 30px 20px;
 }
@@ -143,10 +146,7 @@
 .container .products-container .product img{
    width: 100px;
 }
-/* 
-.imgmodal{
-   width: 100px;
-} */
+
 .product-modal-container{
    display: flex;
    flex-direction: column;
@@ -168,7 +168,7 @@
 }
 
 .container .products-container .product h6{
-   padding: 8px 0;
+   padding: 8px 0 0;
    font-size: 16px;
    color:#2E2A2A;
 }

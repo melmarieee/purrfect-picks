@@ -83,7 +83,7 @@ const Products = () => {
     }
 
     return(
-      <div>
+      <div className='prods'>
         <Header/>
         <Modal isOpen={modal} toggle={toggleModalClose}>
             <ModalHeader toggle={toggleModalClose} style={{fontSize: '12px'}}><span style={{fontSize: '18px'}}>Buy this product</span></ModalHeader>

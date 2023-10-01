@@ -260,7 +260,7 @@ const change_color_filter = (filter) => {
   }
 }
   return(
-    <>
+    <div className='subs'>
     <Header/>
       <main className='subscription-section'>
       <Modal isOpen={modal} toggle={toggleModalClose}>
@@ -317,7 +317,7 @@ const change_color_filter = (filter) => {
                   </p>
                   {
                     subscription.type == "basic" ? 
-                      <span class="badge rounded-pill bg-secondary p-2 my-2 badge_width">Basic</span>
+                      <span class="badge rounded-pill bg-success p-2 my-2 badge_width">Basic</span>
                       :
                       <span class="badge rounded-pill bg-warning p-2 my-2 badge_width">Premium</span>
                   }
@@ -344,7 +344,7 @@ const change_color_filter = (filter) => {
         </div>
      </main>
      <Footer/>
-    </>
+    </div>
     );
 };
 

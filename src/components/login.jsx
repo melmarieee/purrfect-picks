@@ -5,7 +5,7 @@ import loginBG from '../assets/login-bg.png'
 
 const Login = () => {
     return(
-        <div class="container-fluid">
+        <div class="container-fluid logIn">
             <div class="row">
                 <div class="col-md-6">
                     <div class="login-form-contaniner">

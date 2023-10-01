@@ -26,6 +26,9 @@
   color: white;
   padding: 15px 0;
 }
+.header-navbar-links a:hover{
+  border-bottom: solid 2.5px #FFF;
+}
 .ms-auto a{
   display: none;
 }

@@ -34,9 +34,9 @@ const Header = (args) => {
                     <img src={LogoWhite} alt="purrfect-picks-logo" id="navbar-logo1"/>
                 </a>
                 <div className="header-navbar-links">
-                <NavLink href="/subscriptions">Subscriptions</NavLink>
-                <NavLink href="/products">Products</NavLink>
-                <NavLink href="/clinic">Clinic</NavLink>
+                <NavLink href="/subscriptions" id='subs'>Subscriptions</NavLink>
+                <NavLink href="/products" id='prods'>Products</NavLink>
+                <NavLink href="/clinic" id='clinic'>Clinic</NavLink>
                 <NavLink href="/login">Login/Signup</NavLink>
                 </div>
                 
