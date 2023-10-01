@@ -21,13 +21,6 @@
   width: 190px;
   opacity: 0.8;
 }
-
-.navbar-toggler{
-  display: none;
-}
-.nav-link{
-  display: block;
-}
 .header-navbar-links{
   display: flex;
   gap: 30px;
@@ -35,39 +28,35 @@
   padding: 5px 0;
 }
 .header-navbar-links a:hover{
-  border-bottom: 2px solid #FFF;
+  border-bottom: solid 2.5px #FFF;
 }
+.ms-auto a{
+  display: none;
+}
+.navbar-toggler{
+  display: none;
+}
+
 @media screen and (max-width: 840px) {
   .header{
-    padding:10px 30px 10px;
+    padding:10px 50px 10px 50px;
   }
 }
 @media screen and (max-width: 768px) {
   .navbar-toggler{
+    transform: translateX(0px);
+    display: block;
     border: none;
-  }
-  .navbar-toggler-icon{
-    background-image:url('../assets/paw-icon.png') !important;
+    background-color: #FFF;
   }
   .header-navbar-links{
     display: none;
-    gap: 30px;
-    color: white;
-    padding: 5px 0;
   }
-  .navbar-toggler{
-    display: block;
-  }
-  .burger-menu{
-    text-align: right;
-  }
-  .burger-menu a{
+  .ms-auto a{
     color: #FFF;
-  }
-  .burger-menu-container{
+    margin-inline: 5px;
+    padding-bottom: 20px;
+    transition: .3s;
     display: flex;
-    flex-direction: column;
-    justify-content:flex-end;
-    align-items: flex-end;
   }
 }

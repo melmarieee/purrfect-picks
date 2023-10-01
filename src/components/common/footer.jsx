@@ -32,7 +32,7 @@ const Footer = () => {
           </div>
           <div class="footer-col3">
             <h5>CONTACT US</h5>
-            <u><a href='/'>About Us</a></u><br/>
+            <u><a href='../../aboutus'>About Us</a></u><br/>
             <a href="">+63 912 456 7890</a>
           </div>
         </div>

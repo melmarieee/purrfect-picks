@@ -31,9 +31,7 @@ const Header = (props) => {
     }
 
 
-    const [deviceWidth, _] = useState(
-        window.screen.width <= 768
-    )
+    const [deviceWidth, _] = useState(0)
     return(
         <div>
            <Navbar expand={deviceWidth} className='header py-3' >
@@ -54,29 +52,33 @@ const Header = (props) => {
                 </NavLink>
                 </div>
                 
-            <NavbarToggler onClick={toggle} />
+            <NavbarToggler onClick={toggle}/>
             <Collapse isOpen={isOpen} navbar>
-            <Nav className="ms-auto" navbar>
-                <NavItem>
-                    <NavLink href="/subscriptions">Subscriptions</NavLink>
-                </NavItem>
-                <NavItem>
-                    <NavLink href="/products">Products</NavLink>
-                </NavItem>
-                <NavItem>
-                    <NavLink href="/clinic">Clinic</NavLink>
-                </NavItem>
-                <NavItem>
-                    <NavLink href="/login">Login/Signup</NavLink>
-                </NavItem>
-                <NavItem>
-                    <NavLink href="/cart">
-                        <span className=" text-muted float-end mx-2">
-                            <MDBIcon className="text-light" fas icon="cart-shopping" />
-                        </span> {count}
-                    </NavLink>
-                </NavItem>
+            
+            <Nav className="ms-auto burger-menu" navbar>
+                <div className="burger-menu-container">
+                        <NavItem>
+                        <NavLink href="/subscriptions" id='subs'>Subscriptions</NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink href="/products" id='prods'>Products</NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink href="/clinic" id='clinic'>Clinic</NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink href="/login">Login/Signup</NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink href="/cart">
+                            <span className=" text-muted float-end mx-2">
+                                <MDBIcon className="text-light" fas icon="cart-shopping" />
+                            </span> {count}
+                        </NavLink       >
+                    </NavItem>
+                </div>
             </Nav>
+            
             </Collapse>
             </Navbar>
       </div>
