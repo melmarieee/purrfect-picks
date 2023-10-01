@@ -44,9 +44,6 @@ const Header = (props) => {
                 <NavLink href="/subscriptions" id='subs'>Subscriptions</NavLink>
                 <NavLink href="/products" id='prods'>Products</NavLink>
                 <NavLink href="/clinic" id='clinic'>Clinic</NavLink>
-                <NavLink href="/subscriptions">Subscriptions</NavLink>
-                <NavLink href="/products">Products</NavLink>
-                <NavLink href="/Clinic">Clinic</NavLink>
                 <NavLink href="/login">Login/Signup</NavLink>
                 <NavLink href="/cart">
                     <span className=" text-muted float-end mx-2">

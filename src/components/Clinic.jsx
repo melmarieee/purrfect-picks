@@ -19,7 +19,7 @@ import {
 
 export default function Clinic() {
   return (
-    <div>
+    <div className='clinic'>
         <Header/>
         <MDBContainer fluid className="py-5" style={{ backgroundColor: "#eee" }}>
             <MDBRow>

@@ -1,3 +1,6 @@
+.clinic #clinic{
+    border-bottom: solid 2px #FFF;
+}
 body{
     padding-top: 50px;
 }
