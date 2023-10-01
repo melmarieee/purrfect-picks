@@ -21,7 +21,8 @@
 .image-login{
     padding: 30px 30px;
     background-color: #952322;
-    height: 100vh;
+    height: 100%;
+    min-height: 650px;
 }
 
 .enter-details-font {
@@ -34,8 +35,10 @@ body{
 
 .login-bg-container{
  width: 100%;
+ position: relative;
+ margin-block: auto;
+ 
 }
-
 .bot-pic-rotate {
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
@@ -43,4 +46,32 @@ body{
 .login-bg-container a{
     color: gray;
     text-decoration: none;
+}
+.login-flex-container{
+    display: flex;
+}
+.logIn{
+    margin-top: -50px;
+}
+.form-control{
+    width: 300px;
+}
+.input-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.needs-validation{
+    justify-content: center;
+    align-self: center !important;
+    text-align: center;
+}
+@media (max-width:768px){
+    .image-login{
+        display: none;
+    }
+    .form-control{
+        width: 300px;
+    }
 }

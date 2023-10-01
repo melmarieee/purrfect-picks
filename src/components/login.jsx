@@ -84,7 +84,7 @@ const Login = () => {
 
 
     return(
-        <div class="container-fluid logIn">
+    <div class="container-fluid logIn">
             <div class="row">
                 <div class="col-md-6">
                     <div class="login-form-contaniner">
@@ -96,14 +96,16 @@ const Login = () => {
                                 <h1><b>Welcome Back Hooman!</b></h1>
                                 <p class="enter-details-font">Please enter your details</p>
                             </div>
-                            <div>
+                            <div className='input-container'>
                                 <label for="validationCustomUsername" class="form-label mx-2"><b>Email or Phone number</b></label>
-                                <input onChange={changeEmail.bind(this)} type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required/>
+                                <input onChange={changeEmail.bind(this)} type="text" class="form-control" id="validationCustomUsername" 
+                                placeholder='yourname@gmail.com'
+                                aria-describedby="inputGroupPrepend" required/>
                             </div>
                             <br/>
-                            <div>
+                            <div  className='input-container'>
                                 <label for="validationCustom04" class="form-label mx-2"><b>Password</b></label>
-                                <input onChange={changePassword.bind(this)} type="password" class="form-control" placeholder="Password"/>
+                                <input onChange={changePassword.bind(this)} type="password" class="form-control" placeholder="input your assword"/>
                             </div>
                             <div>
                             <div class="form-check">
@@ -121,15 +123,15 @@ const Login = () => {
                     </div>
                     <div class="row">
                         <div class="col-md-12 text-center pb-4">
-                            <span>Don't have an account? <a href="/signup.html"> Signup</a></span>
+                            <span>Don't have an account? <a href="/signup"> Signup</a></span>
                         </div>
                     </div>
                     </div>
                     <div class="col-md-6 image-login">
-                    <img src={loginBG} alt="logo" class="img-fluid login-bg-container bot-pic-rotate pt-5"/>
+                    <img src={loginBG} alt="logo" class="img-fluid login-bg-container bot-pic-rotate"/>
                     </div>
                 </div>
-        </div>
+            </div>
     )
 }
 

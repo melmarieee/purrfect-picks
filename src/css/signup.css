@@ -1,4 +1,7 @@
 
+.signup{
+    margin-top: -60px;
+}
 .buttonsubmit{
     text-align: center;
     background-color: #229495 !important;
@@ -11,10 +14,17 @@
 body{
     background-color:#E9E9E9;
 }
+.signup-image-container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
 
-.image-login{
-    padding: 30px 30px;
 }
+/* .image-login{
+    padding: 30px 30px;
+} */
 
 .logo-container{
     height: 50px;
@@ -22,10 +32,22 @@ body{
 }
 .image-left-container{
     background-color: #229495;
-    height:100vh
+    height:100;
 }
 .bottom-pic-container {
     align-items: flex-start;
     display: flex;
     justify-content: center;
+}
+.signup-img{
+    width: 70%;
+}
+.sign-in-btn{
+    border: solid 1px #868686 ;
+    border-radius: 10px !important;
+}
+.sign-in-btn:hover{
+    background-color: #229495;
+    color: #FFF;
+    border: solid 1px #229495 ;
 }

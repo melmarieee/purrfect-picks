@@ -14,6 +14,7 @@ import sdPremium from '../assets/sdPremium.png'
 import pPremium from '../assets/pPremium.png'
 import cPremium from '../assets/cPremium.png'
 import kPremium from '../assets/kPremium.png'
+import subsHeroImg from '../assets/subs-hero-img.png'
 
 import { Button, Modal, ModalHeader, ModalFooter, Alert } from 'reactstrap';
 
@@ -295,6 +296,16 @@ const change_color_filter = (filter) => {
   return(
   <div className='subs'>
     <Header/>
+    <div className="hero-subs-container">
+              <img src={subsHeroImg} alt="purrfect-picks-subs-img" id='prodSubsImg'/>
+              <div className='prods-subs-texts'>
+                <h1>Every Fur Friend Deserves<br/>
+                    To Be Healthy & Happy
+                     
+                </h1>
+                <p>The best way of giving love to your furry friends is by giving them a pet supply box that can help them be more healthier and happier.</p>    
+              </div>      
+        </div>
     <Header count={carts.length}/>
       {alert}
       <main className='subscription-section'>
@@ -309,7 +320,7 @@ const change_color_filter = (filter) => {
                   </Button>
           </ModalFooter>
       </Modal>
-      <h1 class='subs-header'>SUBSCRIPTIONS</h1>
+
         <div class="filters-container">
           <div class="choose-pet-container">
             <form action="/action_page.php">

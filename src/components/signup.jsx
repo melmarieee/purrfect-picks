@@ -6,18 +6,19 @@ import signupBG from '../assets/sign-upBG.png'
 const Signup = () => {
     return(
         <div>
-            <div className="container-fluid">
+            <div className="container-fluid signup">
                 <div className="row">
                     <div class="col-md-6 image-left-container bottom-pic-container">
-                        <div className="text-center pt-5">
+                        <div className="text-center pt-5 signup-image-container">
                             <a href="/"><img src={purfectlogo} alt="purrfect-picks-logo" width="30%"/></a>
-                            <img src={signupBG} alt="logo" className="img-fluid bot-pic-rotate" width="100%"/>
+                            <img src={signupBG} alt="logo" className="img-fluid bot-pic-rotate signup-img" width="100%"/>
                         </div>
                     </div>
                     <div className="col-md-6 px-5">
                         <div className="d-flex justify-content-end mt-5">
                             <small className="text-muted px-3 mt-1">Already have an account? </small>
-                            <button type="button" className="btn btn-outline-secondary btn-sm rounded">Sign In</button>
+                            <a href="/login"><button type="button" className="btn btn-sm rounded sign-in-btn">Sign In</button></a>
+                            
                         </div>
                         <form action="/login" className="row g-3 p-4" validate>
                             <div className="mb-3">
