@@ -3,12 +3,22 @@ import '../css/account.css'
 import Header from './common/header'
 import Footer from './common/footer'
 import dogFood from '../assets/dogFood.png'
+import {  MDBIcon } from "mdb-react-ui-kit";
 
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Input, Label } from 'reactstrap';
 
 
-const Carts = (props) => {
-    const [carts, setCarts] = useState(props.carts);
+const Carts = () => {
+
+    // Use session carts
+    let session_carts = []
+    const cart_session = window.localStorage.getItem("cart");
+    if (cart_session) {
+        session_carts = JSON.parse(cart_session)
+    }
+    console.log()
+
+    const [carts, setCarts] = useState(session_carts);
     const [acttiveCartIndex, setActiveCartIndex] = useState(0);
     const [carts_index, setCartsIndex] = useState(
         carts.map((_) => 1)
@@ -60,12 +70,15 @@ const Carts = (props) => {
         setCartsIndex(
             carts_index.filter((_, index) => index !== acttiveCartIndex)
         )
+        window.localStorage.setItem("cart", JSON.stringify(
+            carts.filter((_, index) => index !== acttiveCartIndex)
+        ));
         toggleModalClose()
     }
 
     if (carts.length == 0) {
         checkCart = (
-            <div class="text-center m-5">
+            <div class="text-center m-5 margin-no-cart">
                 <h3 class="text-secondary">There are no items in this cart</h3>
             </div>
         )
@@ -85,9 +98,12 @@ const Carts = (props) => {
                             </Button>
                     </ModalFooter>
                 </Modal>
-                <h1 class="pt-5">Cart 🛒</h1>
+                
                 <div>
                     <div class='row'>
+                        <h1 class={carts.length == 0 ? "d-none" : "pt-5"}>My Cart 
+                            <MDBIcon className="text-dark fa-1x mx-3" fas icon="cart-shopping" /> 
+                        </h1>
                         {checkCart}
                         <div class="col-md-9">
                             {
@@ -95,15 +111,47 @@ const Carts = (props) => {
                                     (cart, index) => 
                                     <div class="row p-4 bg-white mx-1 my-3">
                                         <div class="col-md-2 text-center">
-                                            <img class="img-fluid" src={cart.image_src}/>
+                                            <img class="img-fluid" src={cart.img}/>
                                         </div>
                                         <div class="col-md-5 pt-3">
-                                            <h2>{cart.name}</h2>
+                                            <h2>{cart.title}</h2>
+                                            {
+                                                cart.service_type == "subscription" ?
+                                                <span class="badge rounded-pill bg-success p-2 my-2 badge_width">{cart.service_type}</span>
+                                                :
+                                                ""
+                                            }
+
+                                            {
+                                                cart.service_type == "subscription" && cart.type == "basic" ?
+                                                <span class="badge rounded-pill bg-secondary p-2 mx-1 my-2 badge_width">Basic</span>
+                                                :
+                                                ""
+                                            }
+
+                                            {
+                                                cart.service_type == "subscription" && cart.type == "premium" ?
+                                                <span class="badge rounded-pill bg-warning p-2 my-2 mx-1 badge_width">Premium</span>
+                                                :
+                                                ""
+                                            }
+                                            
                                             <p>{cart.description}</p>
                                         </div>
                                         <div class="col-md-2 text-center pt-5">
-                                            <h5><b>₱ {cart.price}</b></h5>
-                                            <button class="btn btn-danger" onClick={toggleModalOpen.bind(this, index)}>Remove</button>
+                                            <h5><b>
+                                                {
+                                                    cart.service_type == "subscription" ?
+                                                    `₱ ${cart.price} / Month`
+                                                    :
+                                                    `₱ ${cart.price}`
+                                                }
+                                            </b></h5>
+                                            <button class="btn btn-danger" onClick={toggleModalOpen.bind(this, index)}>
+                                                <span className=" text-light float-end mx-2">
+                                                    <MDBIcon fas icon="trash" />
+                                                </span>
+                                            </button>
                                         </div>
                                         <div class="col-md-3 text-center pt-5">
                                             <div class="input-group justify-content-center">

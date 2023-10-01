@@ -22,6 +22,11 @@
     text-align: center;
     border-color:solid gray;
 }
+
+.margin-no-cart {
+    margin-top: 200px !important;
+    margin-bottom: 300px !important;
+}
 /* .pet1-info{
     width: 50%;
 }

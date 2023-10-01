@@ -2,6 +2,7 @@ import '../css/subscriptions.css'
 import { useState } from 'react'
 import Header from './common/header'
 import Footer from './common/footer'
+import AlertMessage from './common/alert'
 
 import ldBasic from '../assets/ldBasic.png'
 import sdBasic from '../assets/sdBasic.png'
@@ -142,12 +143,18 @@ const subscription_data = [
 
 let bgColor = document.getElementsByClassName('filter-btn');
 
-const Subscriptions = () => {  
+const Subscriptions = (props) => {
+
 const [allSubscriptions, changeFilter] = useState(subscription_data)
 const [activeSubscribe, changeActiveSubscribe] = useState(null)
 const [activePet, changeactivePet] = useState("none")
 const [activePetMessage, changeactivePetMessage] = useState(null)
 const [modal, setModal] = useState(false);
+const [alert, setAlert] = useState(null);
+
+const cart_session = window.localStorage.getItem("cart");
+const parsed_cart = JSON.parse(cart_session)
+const [carts, setCarts] = useState(parsed_cart ? parsed_cart : []);
 
 const toggleModalClose = () => {
   setModal(!modal)
@@ -155,6 +162,13 @@ const toggleModalClose = () => {
 
 const toggleModalOpen = (subscription) => {
   if (activePet == "none") {
+    setAlert(
+      <AlertMessage color="danger" name="Please select yout pet" open={true}/>
+    )
+    setTimeout(function() { 
+      setAlert(null)
+    }, 2000);
+
     changeactivePetMessage(
       <span class="text-danger px-3">Please select your pet to subscribe</span>
     )
@@ -171,7 +185,26 @@ const toggleModalOpen = (subscription) => {
 }
 
 const subscribe_pet = () => {
+  setAlert(
+    <AlertMessage color="success" name={"Successfully added to cart" + activeSubscribe.title + " for: " + activeSubscribe.name} open={true}/>
+  )
+  setTimeout(function() { 
+    setAlert(null)
+  }, 2000);
   setModal(!modal)
+
+  if (carts) {
+    let new_cart = carts;
+    new_cart.push(activeSubscribe)
+
+    window.localStorage.setItem("cart", JSON.stringify(new_cart));
+    setCarts(new_cart)
+
+    return;
+  }
+
+  window.localStorage.setItem("cart", JSON.stringify([activeSubscribe]));
+  setCarts([activeSubscribe])
 }
 
 
@@ -260,11 +293,13 @@ const change_color_filter = (filter) => {
   }
 }
   return(
-    <div className='subs'>
+  <div className='subs'>
     <Header/>
+    <Header count={carts.length}/>
+      {alert}
       <main className='subscription-section'>
       <Modal isOpen={modal} toggle={toggleModalClose}>
-          <ModalHeader toggle={toggleModalClose}>Do you want to subscribe: {activeSubscribe ? activeSubscribe.name : ""}</ModalHeader>
+          <ModalHeader toggle={toggleModalClose}>Do you want add to cart: {activeSubscribe ? activeSubscribe.title + ` For ${activeSubscribe.name}`  : ""}</ModalHeader>
           <ModalFooter>
                   <Button className="mx-3" color="secondary" onClick={toggleModalClose}>
                       Cancel
@@ -336,7 +371,7 @@ const change_color_filter = (filter) => {
               </div>
               <div  className='subs-second-row'>
                 <h5>₱{subscription.price} / Monthly </h5>
-                <button onClick={toggleModalOpen.bind(this, subscription)}>Subscribe</button>
+                <button onClick={toggleModalOpen.bind(this, subscription)}>Add to cart</button>
               </div>
             </div>
           )
@@ -344,7 +379,7 @@ const change_color_filter = (filter) => {
         </div>
      </main>
      <Footer/>
-    </div>
+  </div>
     );
 };
 

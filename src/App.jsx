@@ -9,47 +9,25 @@ import Products from './components/products'
 import Account from './components/account'
 import Subscriptions from './components/subscriptions'
 import Cart from './components/cart'
-import Chatbot from './components/chatbot'
+import Clinic from './components/Clinic'
 import dogFood from './assets/dogFood.png'
+import Tracker from "./components/tracker";
 
 // const Login []
 
-const carts = [
-  {
-    id: 1,
-    name: "Aozi 30 KG Sack",
-    type: "product",
-    image_src: dogFood,
-    description: "Younger than 10 months of age, also suitable for Pregnant and Lactating Dogs",
-    price: 5000,
-  },
-  {
-    id: 1,
-    name: "Aozi 30 KG Sack",
-    type: "product",
-    image_src: dogFood,
-    description: "Younger than 10 months of age, also suitable for Pregnant and Lactating Dogs",
-    price: 5000,
-  },
-  {
-    id: 1,
-    name: "Aozi 30 KG Sack",
-    type: "product",
-    image_src: dogFood,
-    description: "Younger than 10 months of age, also suitable for Pregnant and Lactating Dogs",
-    price: 6000,
-  },
-  {
-    id: 1,
-    name: "Aozi 30 KG Sack",
-    type: "product",
-    image_src: dogFood,
-    description: "Younger than 10 months of age, also suitable for Pregnant and Lactating Dogs",
-    price: 6000,
-  }
-]
 
 function App() {
+  const carts = [
+    {
+      id: 1,
+      name: "Aozi 30 KG Sack",
+      type: "product",
+      image_src: dogFood,
+      description: "Younger than 10 months of age, also suitable for Pregnant and Lactating Dogs",
+      price: 5000,
+    },
+  ]
+  
   const router = createBrowserRouter([
     {
       path: "/",
@@ -85,11 +63,15 @@ function App() {
     },
     {
       path: "/cart",
-      element: <Cart carts={carts}/>,
+      element: <Cart/>,
     },
     {
-      path: "/chatbot",
-      element: <Chatbot/>,
+      path: "/Clinic",
+      element: <Clinic/>,
+    },
+    {
+      path: "/tracker",
+      element: <Tracker/>,
     },
   ]);
 
