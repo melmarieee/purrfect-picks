@@ -6,6 +6,7 @@ footer{
   font-size: 18px;
   font-family: 'DM sans';
   color: white;
+  bottom: 0;
   z-index: 0;
 }
 footer a{

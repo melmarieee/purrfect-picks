@@ -1,6 +1,7 @@
 import '../css/homepage.css'
 import Header from './common/header'
 import Footer from './common/footer'
+import AlertMessage from './common/alert'
 
 import homeHeroFinal2 from '../assets/home-hero-final2.png'
 import productsInBox from '../assets/products-in-box.png'
@@ -11,6 +12,7 @@ import lorraine from '../assets/loraine.png'
 import baldonado from '../assets/baldonado.png'
 import kuyaKim from '../assets/kuyakim.png'
 import piolo from '../assets/piolo.png'
+
 
 const Index = () => {
     return(

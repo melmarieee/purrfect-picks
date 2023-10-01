@@ -1,6 +1,20 @@
 body{
     padding-top: 50px;
 }
-p{
-    text-decoration: none;
+.recent-info{
+    background-color: #eee;
 }
+a {
+    text-decoration: none !important;
+}
+.button-container{
+    background-color: #229495;
+    border-radius: 5px;
+    border-color: #229495;
+}
+
+.response-info{
+    border-radius: 20px;
+    
+}
+

@@ -3,21 +3,26 @@ import Header from './common/header'
 import Footer from './common/footer'
 import { useState } from 'react'
 import kaori from '../assets/kaori.jpg'
+import Gcash from '../assets/Gcash.jpg'
 
 const Account = () => {
+    const user_session = window.localStorage.getItem("user");
+
     const [enableInputProfile, setInput] = useState(true)
     const [showButtonInfo, setshowButtonInfo] = useState("")
     const [enableInputBill, setInputBill] = useState(true)
     const [showButtonInfoBill, setButtonInfoBill] = useState("")
     const [enableShipping, setShipping] = useState(true)
     const [showButtonShipping, setButtonShipping] = useState("")
+    const [user, setUser] = useState(JSON.parse(user_session))
+
 
     
     let changeInfo = () => {
         setInput(!enableInputProfile)
 
         setshowButtonInfo(
-            <button onClick={disableInput} className='submit1-info px-2 py-1'>Submit</button>
+            <button onClick={disableInput} className='submit1-info text-white px-2 py-1'>Submit</button>
         )
         if (!enableInputProfile){
             setshowButtonInfo("")
@@ -33,7 +38,7 @@ const Account = () => {
         setInputBill(!enableInputBill)
 
         setButtonInfoBill (
-            <button onClick={disableInfoBill} className='submit1-info px-2 py-1'>Submit</button>
+            <button onClick={disableInfoBill} className='submit1-info text-white px-2 py-1'>Submit</button>
         )
         if (!enableInputBill){
             setButtonInfoBill("")
@@ -48,7 +53,7 @@ const Account = () => {
         setShipping(!enableShipping)
 
         setButtonShipping (
-            <button onClick={disableShipping} className='submit1-info px-2 py-1'>Submit</button>
+            <button onClick={disableShipping} className='submit1-info text-white px-2 py-1'>Submit</button>
         )
 
         if(!enableShipping){
@@ -77,14 +82,14 @@ const Account = () => {
                         <form action="">
                             <label for="exampleInputName" class="form-label">Purr Parent Name:</label>
                             <br/>
-                            <input type="text" disabled={enableInputProfile} class="form-control" id="exampleInputName"/>
+                            <input defaultValue={user.name} type="text" disabled={enableInputProfile} class="form-control" id="exampleInputName"/>
                             <br />
                             <label for="exampleInputEmail1" class="form-label">Email address</label>
-                            <input type="email" disabled={enableInputProfile} class="form-control" id="exampleInputEmail1"/>
+                            <input defaultValue={user.email} type="email" disabled={enableInputProfile} class="form-control" id="exampleInputEmail1"/>
                             <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
 
                             <label for="exampleInputName" class="form-label">Age:</label>
-                            <input type="text" disabled={enableInputProfile} class="form-control" id="exampleInputName"/>
+                            <input defaultValue={user.age} type="text" disabled={enableInputProfile} class="form-control" id="exampleInputName"/>
                         </form>
                         <div className='submit-info p-3'>
                             {showButtonInfo}
@@ -97,17 +102,20 @@ const Account = () => {
                                 <div className="edit-info">
                                     <span><u onClick={changeInfoBill}>Edit</u></span>
                                 </div>
-                            <form action="">
-                                <div>
-                                    <label for="exampleInputEmail1" class="form-label">Address</label>
-                                    <input type="text" disabled={enableInputBill} class="form-control" id="exampleInputEmail1"/>
-                                    <br />
-                                    <select disabled={enableInputBill} class="form-select form-select-sm" aria-label=".form-select-sm example">
-                                        <option selected>Philippines</option>
-                                    </select>
-
-                                </div>
-                            </form>
+                                <form action="">
+                                    <div>
+                                        <label for="exampleInputEmail1" class="form-label">Gcash number</label>
+                                        <br />
+                                    </div>
+                                    <div className='row'>
+                                        <div className='col-md-2'>
+                                            <img src={Gcash} alt="avatar" className="img-fluid mx-2" />
+                                        </div>
+                                        <div className='col-md-10'>
+                                            <input defaultValue={user.billing_information.gcash} type="text" disabled={enableInputBill} class="form-control p-1" id="exampleInputEmail1"/>
+                                        </div>
+                                    </div>
+                                </form>
                             <div className='submit-info p-3'>
                                  {showButtonInfoBill}
                             </div>
@@ -120,17 +128,14 @@ const Account = () => {
                                         <span><u onClick={changeShipping}>Edit</u></span>
                                     </div>
                             <form action="">
-                                    <label for="exampleInputName" class="form-label">Full Name</label>
-                                    <input type="text" disabled={enableShipping} class="form-control" id="exampleInputName"/>
-
                                     <label for="exampleInputEmail1" class="form-label">Address</label>
-                                    <input type="email" disabled={enableShipping} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+                                    <input defaultValue={user.shipping_information.address} type="email" disabled={enableShipping} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
                                     
                                     <label for="exampleInputNumber" class="form-label">Contact Number</label>
-                                    <input type="number" disabled={enableShipping} class="form-control" id="exampleInputNumber"/>
+                                    <input defaultValue={user.shipping_information.number} type="number" disabled={enableShipping} class="form-control" id="exampleInputNumber"/>
 
                                     <label for="exampleInputZip" class="form-label">Zip Code</label>
-                                    <input type="number" disabled={enableShipping} class="form-control" id="exampleInputZip"/>
+                                    <input defaultValue={user.shipping_information.zip_code} type="number" disabled={enableShipping} class="form-control" id="exampleInputZip"/>
                             </form>
                             <div className='submit-info p-3'>
                                 {showButtonShipping}
@@ -143,15 +148,34 @@ const Account = () => {
             <hr class="m-5"/>
             <div className='container-fluid px-5'>
                 <div class="row">
-                    <div class="card col-md-3">
-                        <img class="card-img-top" src={kaori} alt="Card image cap"/>
-                        <div class="card-body">
-                            <h3 class="card-title">Kaori</h3>
-                            <p>Breed: Shihtzu</p>
-                            <p>Age: 3</p>
-                            <p>We ight(kg): 8KG</p>
-                            <button href="#" class="btn buttonsubmit">Details</button>
-                            <h5><b>Vaccination Certificate</b></h5>
+                    {
+                    user.pets.map(
+                        (pet, _) => 
+                        <div class="card col-md-3">
+                            <img class="card-img-top" src={kaori} alt="Card image cap"/>
+                            <div class="card-body">
+                                <h3 class="card-title">{pet.name}</h3>
+                                <p>Breed: Shihtzu</p>
+                                <p>Age: {pet.age}</p>
+                                <p>Weight (KG): {pet.weight}</p>
+                                <h4>Subscriptions</h4>
+                                <span class="badge rounded-pill bg-secondary p-2 mx-1 my-2 badge_width">SD Basic</span>
+                                <span class="badge rounded-pill bg-warning p-2 mx-1 my-2 badge_width">SD PREMIUM</span>
+                            </div>
+                        </div>
+                    )
+                    }
+                    
+                </div>
+            </div>
+            <Footer/>
+        </div>
+    )
+}
+
+export default Account;
+
+{/* <h5><b>Vaccination Certificate</b></h5> */}
 {/* <div className='table-container'>
     <table class="table">
         <thead>
@@ -180,13 +204,3 @@ const Account = () => {
         </tbody>
     </table>
 </div>   */}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <Footer/>
-        </div>
-    )
-}
-
-export default Account;
