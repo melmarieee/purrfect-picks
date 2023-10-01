@@ -28,18 +28,18 @@
 }
 #pet-name{
   border: none;
-  margin-left: 20px;
+  margin-left: 10px;
   padding-inline: 30px;
   text-align: left;
 }
 .subs-filter ol{
   display: flex;
   list-style: none;
-  gap: 15px;
+  gap: 10px;
 }
 .filter-btn{
   background-color: #E9E9E9;
-  padding: 5px 20px;
+  padding: 5px 15px;
   border-radius: 5px;
   cursor: pointer;
 }
