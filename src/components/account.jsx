@@ -17,7 +17,6 @@ const Account = () => {
     const [user, setUser] = useState(JSON.parse(user_session))
 
 
-    
     let changeInfo = () => {
         setInput(!enableInputProfile)
 

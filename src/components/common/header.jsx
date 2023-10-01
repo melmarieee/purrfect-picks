@@ -10,11 +10,19 @@ import {
     Nav,
     NavItem,
     NavLink,
+    Dropdown,
+    DropdownToggle,
+    DropdownItem,
+    DropdownMenu,
+    UncontrolledDropdown
   } from 'reactstrap';
 
 
 const Header = (props) => {
+    const cart_user = window.localStorage.getItem("user");
+
     const [isOpen, setIsOpen] = useState(false);
+    const [user, setUser] = useState(JSON.parse(cart_user));
     const toggle = () => setIsOpen(!isOpen)
 
     let count = 0;
@@ -30,6 +38,18 @@ const Header = (props) => {
         count = parsed_cart.length
     }
 
+    const toggleLogout = () => {
+        window.location.href = "/login";
+    }
+
+    const toggleAccount = () => {
+        window.location.href = "/account";
+    }
+
+    const toggleTracker = () => {
+        window.location.href = "/tracker";
+    }
+
 
     const [deviceWidth, _] = useState(0)
     return(
@@ -42,14 +62,41 @@ const Header = (props) => {
                 <NavLink href="/subscriptions" id='subs'>Subscriptions</NavLink>
                 <NavLink href="/products" id='prods'>Products</NavLink>
                 <NavLink href="/clinic" id='clinic'>Clinic</NavLink>
-                <NavLink href="/login">Login/Signup</NavLink>
                 <NavLink href="/cart">
                     <span className=" text-muted float-end mx-2">
                         <MDBIcon className="text-light" icon="cart-shopping" />
-                        <span className='text-light mx-2'>{count}</span>
+                        <span className='text-light mx-2'> Cart {count} </span>
                     </span> 
-                    
                 </NavLink>
+                {
+                    user ? 
+                    <NavLink>
+                        {user.name}
+                        <UncontrolledDropdown group direction="down">
+                            <DropdownToggle
+                                caret
+                                color="#952322"
+                                className='buttoncaret'
+                            />
+                            <DropdownMenu>
+                                <DropdownItem header>
+                                Profile
+                                </DropdownItem>
+                                <DropdownItem onClick={toggleAccount.bind(this)}>
+                                    Account
+                                </DropdownItem>
+                                <DropdownItem onClick={toggleTracker.bind(this)}>
+                                    Track your orders
+                                </DropdownItem>
+                                <DropdownItem onClick={toggleLogout.bind(this)}>
+                                    Logout
+                                </DropdownItem>
+                            </DropdownMenu>
+                        </UncontrolledDropdown>
+                    </NavLink>
+                    :
+                    <NavLink href="/login">Login/Signup</NavLink>
+                }
                 </div>
                 
             <NavbarToggler onClick={toggle}/>
@@ -67,26 +114,48 @@ const Header = (props) => {
                         <NavLink href="/clinic" id='clinic'>Clinic</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink href="/login">Login/Signup</NavLink>
-                    </NavItem>
-                    <NavItem>
                         <NavLink href="/cart">
                             <span className=" text-muted float-end mx-2">
                                 <MDBIcon className="text-light" fas icon="cart-shopping" />
-                            </span> {count}
+                            </span> Cart {count}
                         </NavLink       >
                     </NavItem>
+                    {
+                        user ? 
+                        <NavLink>
+                            {user.name}
+                            <UncontrolledDropdown group direction="down">
+                                <DropdownToggle
+                                    caret
+                                    color="#952322"
+                                    className='buttoncaret'
+                                />
+                                <DropdownMenu>
+                                    <DropdownItem header>
+                                    Profile
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <a href="/account" className='text-dark'>
+                                            Account settings
+                                        </a>
+                                    </DropdownItem>
+                                    <DropdownItem href="/tracker">
+                                        <a href="/tracker" className='text-dark'>
+                                            Tracking    
+                                        </a>
+                                    </DropdownItem>
+                                </DropdownMenu>
+                            </UncontrolledDropdown>
+                        </NavLink>
+                        :
+                        <NavLink href="/login">Login/Signup</NavLink>
+                    }
                 </div>
             </Nav>
             
             </Collapse>
             </Navbar>
       </div>
-
-
-
-
-       
     )
 }
 

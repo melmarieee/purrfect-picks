@@ -114,7 +114,7 @@ const Carts = () => {
                                             <img class="img-fluid" src={cart.img}/>
                                         </div>
                                         <div class="col-md-5 pt-3">
-                                            <h2>{cart.title}</h2>
+                                            <h2>{cart.title} {cart.name ? <span className='text-secondary h5'>({cart.name})</span> : ""}</h2>
                                             {
                                                 cart.service_type == "subscription" ?
                                                 <span class="badge rounded-pill bg-success p-2 my-2 badge_width">{cart.service_type}</span>
