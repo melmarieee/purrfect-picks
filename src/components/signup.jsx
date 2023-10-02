@@ -15,12 +15,12 @@ const Signup = () => {
                         </div>
                     </div>
                     <div className="col-md-6 px-5">
-                        <div className="d-flex justify-content-end mt-5">
+                        <div className="d-flex justify-content-end mt-5 signin-now-container">
                             <small className="text-muted px-3 mt-1">Already have an account? </small>
                             <a href="/login"><button type="button" className="btn btn-sm rounded sign-in-btn">Sign In</button></a>
                             
                         </div>
-                        <form action="/login" className="row g-3 p-4" validate>
+                        <form action="/login" className="row g-3 p-3 signup-form-container" validate>
                             <div className="mb-3">
                                 <h2 className="h2"><b>Welcome Hooman!</b></h2>
                                 <small className="text-muted">Register your account</small>
