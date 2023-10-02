@@ -5,22 +5,23 @@
   padding: 30px 20px 30px 20px;
 }
 .hero-prods-container{
-   background-color: #229495;
+   margin-top: 14px;
+   background-image: linear-gradient(to bottom right,#226395d4, #229395e9, rgba(255, 255, 0, 0.222));
    margin-inline: auto;
    width: 100%;
-   max-width: 1180px;
-   height: 200px;
-   border-radius: 5px 5px 20px 5px;
-   margin-bottom: 40px;
+   height: 250px;
+   border-radius: 5px 5px 20% 20%;
    display: flex;
-   justify-content: space-between;
+   justify-content: center;
    padding: 0 80px 0 10px;
+   margin-bottom: 20px;
 }
 #prodHeroImg{
-   width: 25%;
+   width: 35%;
    position: relative;
-   min-width: 350px;
-   min-height: 211px;
+   min-width: 460px;
+   max-width: 460px;
+   min-height: 290px;
    margin-top: 67.4px;
 }
 .hero-prods-container h1{
@@ -29,7 +30,7 @@
    font-size: 40px;
    font-weight: 800;
    width: 600px;
-   padding: 15px 0 0 50px;
+   padding: 35px 0 0 50px;
 }
 .hero-prods-container p{
    color: #FFF;
@@ -67,7 +68,7 @@
       width: 100%;
    }
    #prodHeroImg{
-      width: 25%;
+      width: 40%;
       position: relative;
       min-width: 300px;
       min-height: 181px;
@@ -82,6 +83,8 @@
 @media (max-width:560px){
    .hero-prods-container{
       padding-inline: 20px;
+      margin-top: -5px;
+      border-radius: 0;
    }
    .hero-prods-container h1{
       text-align: center;
@@ -184,7 +187,17 @@
 .container .products-container .product .view-button:hover{
    background-color: #952322;
 }
-
+.modal-container{
+   display: flex;
+   flex-direction: column;
+}
+.modal-prod{
+   width: 80%;
+   margin-inline: auto;
+}
+.modal-container p{
+   font-size: 14px;
+} 
 
 @media (max-width:768px){
 

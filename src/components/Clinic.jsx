@@ -162,3 +162,39 @@ export default function Clinic() {
     </div>
   );
 }
+
+
+
+
+
+
+// import Header from './common/header'
+// import '../css/chatbot.css'
+// import Footer from './common/footer'
+// import Logo from '../assets/logoClinic.png'
+// import React from "react";
+// import dogoLogo from '../assets/dogoLogo.png'
+// import {
+//   MDBContainer,
+//   MDBRow,
+//   MDBCol,
+//   MDBCard,
+//   MDBCardBody,
+//   MDBIcon,
+//   MDBBtn,
+//   MDBTypography,
+//   MDBTextArea,
+//   MDBCardHeader,
+// } from "mdb-react-ui-kit";
+
+// export default function Clinic() {
+//   return (
+//     <div>
+//         <Header/>
+//             <div className='clinic'>
+
+//             </div>
+//         <Footer/>
+//     </div>
+//   );
+// }
