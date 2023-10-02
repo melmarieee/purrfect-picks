@@ -18,7 +18,7 @@ const Carts = () => {
     }
     console.log()
 
-    const [carts, setCarts] = useState(session_carts);
+    const [carts, setCarts] = useState(session_carts.reverse());
     const [acttiveCartIndex, setActiveCartIndex] = useState(0);
     const [carts_index, setCartsIndex] = useState(
         carts.map((_) => 1)

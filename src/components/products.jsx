@@ -88,6 +88,12 @@ const Products = (props) => {
     }
 
     const addToCart = () => {
+
+      const cart_user = window.localStorage.getItem("user");
+      if (!cart_user) {
+        window.location.href = "/login";
+        return
+      }
       
       setModal(!modal)
       setAlert(
