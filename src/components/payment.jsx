@@ -66,7 +66,7 @@ const Payment = () => {
             </div>
             <div class="payment-info-container">
               <p class="left-part">Amount Due</p>
-              <p class="right-part price-of-subscription">PHP 399.00</p>
+              <p class="right-part price-of-subscription">PHP 663.00</p>
             </div>
 
             <div class="payment-info-container2">

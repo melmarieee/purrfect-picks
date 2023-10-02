@@ -41,6 +41,32 @@ const users = [
                 ]
             }
         ]
+    },
+    {
+        name: "Peter John Reyes",
+        email: "peterjohn@gmail.com",
+        password: "123456",
+        age: 23,
+        billing_information: {
+            gcash: "09208983562"
+        },
+        shipping_information: {
+            address: "Brgy. IV, Mataasnakahoy Batangas",
+            zip_code: 4223,
+            number: "09208983562"
+        },
+        pets: [
+            {
+                name: "Kaori",
+                age: 2,
+                breed: "Shitzu",
+                weight: "7",
+                img: null,
+                subscriptions: [
+                    "SD BASIC"
+                ]
+            }
+        ]
     }
 ]
 

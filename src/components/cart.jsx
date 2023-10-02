@@ -78,8 +78,12 @@ const Carts = () => {
 
     if (carts.length == 0) {
         checkCart = (
-            <div class="text-center m-5 margin-no-cart">
-                <h3 class="text-secondary">There are no items in this cart</h3>
+            <div class="text-center m-6 margin-no-cart">
+                <MDBIcon className="text-dark fa-3x mx-3" fas icon="cart-shopping" /> 
+                <center><h3 class="text-secondary">YOUR CART IS EMPTY</h3>
+                <a href="/products"><button className='cart-btn'>SHOP NOW!</button></a>
+                </center>
+
             </div>
         )
     }
@@ -209,7 +213,7 @@ const Carts = () => {
                                 <div>
                                     <h4>Payment Method</h4>
                                     <div class="form-check p-3">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"/>
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"checked/>
                                         <label class="form-check-label" for="flexRadioDefault1">
                                             Gcash
                                         </label>
@@ -221,13 +225,14 @@ const Carts = () => {
                                         </label>
                                     </div>
                                     <div class="form-check p-3">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked/>
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" />
                                         <label class="form-check-label" for="flexRadioDefault2">
                                             Cash On Delivery
                                         </label>
                                     </div>
                                 </div>
-                                <button type="button" class="btn btn-primary">Place Order Now</button>
+                                <a href="/payment"><button type="button" class="btn btn-primary">Place Order Now</button></a>
+                                
                             </div>
                         </div>
                     </div>

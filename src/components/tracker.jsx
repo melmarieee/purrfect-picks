@@ -63,7 +63,7 @@ function Tracker() {
                             md="2"
                             className="text-center d-flex justify-content-center align-items-center"
                           >
-                            <p className="text-muted mb-0">Aozi DogFood</p>
+                            <p className="text-muted mb-0">Purrpicks Dog Food</p>
                           </MDBCol>
                           <MDBCol
                             md="2"
@@ -89,7 +89,7 @@ function Tracker() {
                             md="2"
                             className="text-center d-flex justify-content-center align-items-center"
                           >
-                            <p className="text-muted mb-0 small">₱ 699.00</p>
+                            <p className="text-muted mb-0 small">₱ 299.00</p>
                           </MDBCol>
                         </MDBRow>
                         <hr
@@ -116,7 +116,7 @@ function Tracker() {
                             </MDBProgress>
                             <div className="d-flex justify-content-around mb-1">
                               <p className="text-muted mt-1 mb-0 small ms-xl-5">
-                                Out for delivary
+                                Out for delivery
                               </p>
                               <p className="text-muted mt-1 mb-0 small ms-xl-5">
                                 Delivered
@@ -141,7 +141,7 @@ function Tracker() {
                             md="2"
                             className="text-center d-flex justify-content-center align-items-center"
                           >
-                            <p className="text-muted mb-0">LcVit</p>
+                            <p className="text-muted mb-0">Purrpicks Multivitamins</p>
                           </MDBCol>
                           <MDBCol
                             md="2"
@@ -168,7 +168,7 @@ function Tracker() {
                             md="2"
                             className="text-center d-flex justify-content-center align-items-center"
                           >
-                            <p className="text-muted mb-0 small">₱ 2 699.00</p>
+                            <p className="text-muted mb-0 small">₱ 299.00</p>
                           </MDBCol>
                         </MDBRow>
                         <hr
@@ -195,7 +195,7 @@ function Tracker() {
                             </MDBProgress>
                             <div className="d-flex justify-content-around mb-1">
                               <p className="text-muted mt-1 mb-0 small ms-xl-5">
-                                Out for delivary
+                                Out for delivery
                               </p>
                               <p className="text-muted mt-1 mb-0 small ms-xl-5">
                                 Delivered
@@ -212,7 +212,7 @@ function Tracker() {
                     <div className="d-flex justify-content-between pt-2">
                       <p className="text-muted mb-0">Invoice Number : 788152</p>
                       <p className="text-muted mb-0">
-                        <span className="fw-bold me-4">Total:</span> ₱ 3398.00
+                        <span className="fw-bold me-4">Total:</span> ₱ 598.00
                       </p>
                     </div>
                     <div className="d-flex justify-content-between">
@@ -244,7 +244,7 @@ function Tracker() {
                       
                       className="d-flex align-items-center justify-content-end text-white text-uppercase mb-0"
                     >
-                      <b>Total paid:</b> <span className="mb-0 ms-2">₱ 3463.00</span>
+                      <b>Total paid:</b> <span className="mb-0 ms-2">₱ 663.00</span>
                     </MDBTypography>
                   </MDBCardFooter>
                 </MDBCard>

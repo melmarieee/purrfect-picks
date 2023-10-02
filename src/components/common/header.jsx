@@ -100,6 +100,7 @@ const Header = (props) => {
                     :
                     <NavLink href="/login">Login/Signup</NavLink>
                 }
+                
                 </div>
                 
             <NavbarToggler onClick={toggle}/>

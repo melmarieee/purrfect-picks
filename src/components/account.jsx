@@ -143,9 +143,9 @@ const Account = () => {
                    </div>
                 </div>
             </div>
-            <h3 class="px-5">My Pets</h3>
+            <h3 class="px-5 p-3">My Pets</h3>
             <hr class="m-5"/>
-            <div className='container-fluid px-5'>
+            <div className='container-fluid px-5 py-2'>
                 <div class="row">
                     {
                     user.pets.map(
@@ -158,7 +158,7 @@ const Account = () => {
                                 <p>Age: {pet.age}</p>
                                 <p>Weight (KG): {pet.weight}</p>
                                 <h4>Subscriptions</h4>
-                                <span class="badge rounded-pill bg-secondary p-2 mx-1 my-2 badge_width">SD Basic</span>
+                                {/* <span class="badge rounded-pill bg-secondary p-2 mx-1 my-2 badge_width">SD Basic</span> */}
                                 <span class="badge rounded-pill bg-warning p-2 mx-1 my-2 badge_width">SD PREMIUM</span>
                             </div>
                         </div>

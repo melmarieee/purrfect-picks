@@ -15,6 +15,7 @@
 .buttoncaret {
   color: white;
   height: 0px;
+  margin-top: -20px;
 }
 #navbar-logo1{
   width: 180px;
