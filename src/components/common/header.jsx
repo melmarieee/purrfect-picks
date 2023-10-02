@@ -18,6 +18,7 @@ import {
   } from 'reactstrap';
 
 
+  
 const Header = (props) => {
     const cart_user = window.localStorage.getItem("user");
 
@@ -39,6 +40,9 @@ const Header = (props) => {
     }
 
     const toggleLogout = () => {
+        localStorage.removeItem("cart");
+        localStorage.removeItem("user");
+
         window.location.href = "/login";
     }
 
@@ -61,7 +65,6 @@ const Header = (props) => {
                 <div className="header-navbar-links">
                 <NavLink href="/subscriptions" id='subs'>Subscriptions</NavLink>
                 <NavLink href="/products" id='prods'>Products</NavLink>
-                <NavLink href="/clinic" id='clinic'>Clinic</NavLink>
                 <NavLink href="/cart">
                     <span className=" text-muted float-end mx-2">
                         <MDBIcon className="text-light" icon="cart-shopping" />
@@ -109,9 +112,6 @@ const Header = (props) => {
                     </NavItem>
                     <NavItem>
                         <NavLink href="/products" id='prods'>Products</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href="/clinic" id='clinic'>Clinic</NavLink>
                     </NavItem>
                     <NavItem>
                         <NavLink href="/cart">

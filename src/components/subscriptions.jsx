@@ -146,6 +146,9 @@ let bgColor = document.getElementsByClassName('filter-btn');
 
 const Subscriptions = (props) => {
 
+const [cart_user, _] = useState(
+  JSON.parse(window.localStorage.getItem("user"))
+)
 const [allSubscriptions, changeFilter] = useState(subscription_data)
 const [activeSubscribe, changeActiveSubscribe] = useState(null)
 const [activePet, changeactivePet] = useState("none")
@@ -162,6 +165,10 @@ const toggleModalClose = () => {
 }
 
 const toggleModalOpen = (subscription) => {
+  if (!cart_user) { 
+    window.location.href = "/login";
+    return;
+  }
   if (activePet == "none") {
     setAlert(
       <AlertMessage color="danger" name="Please select yout pet" open={true}/>
@@ -327,9 +334,12 @@ const change_color_filter = (filter) => {
               <label for="pet-name">For:</label>
                 <select onChange={choosePet.bind(this)} name="pet-name" id="pet-name">
                   <option value="none">Choose Pet</option>
-                  <option value="Rio">Rio</option>
-                  <option value="Stella">Stella</option>
-                  <option value="Miyo">Miyo</option>
+                  {
+                    cart_user ? cart_user.pets.map(
+                      (pet) => 
+                      <option value={pet.name}>{pet.name}</option>
+                    ) : <option></option>
+                  }
                 </select>
                 {
                   activePetMessage
