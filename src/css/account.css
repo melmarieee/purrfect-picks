@@ -1,3 +1,6 @@
+.account-page{
+    padding: 20px;
+}
 .account-info{
     border: solid 2px;
    
@@ -55,4 +58,16 @@
     border-radius:20px;
     /* width: 130px; */
     padding-block: 3px;
+}
+.cart-btn{
+    border: solid #2E2A2A 2px;
+    border-radius: 5px;
+    padding: 5px 20px;
+    font-weight: 600;
+    color: #2E2A2A;
+}
+.cart-btn:hover{
+    background-color: #952322;
+    color: #FFF;
+    border: solid #952322 2px;
 }

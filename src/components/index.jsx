@@ -3,7 +3,9 @@ import Header from './common/header'
 import Footer from './common/footer'
 import AlertMessage from './common/alert'
 
-import homeHeroFinal2 from '../assets/home-hero-final2.png'
+import homeHeroFinal from '../assets/home-hero-final.png'
+import homeHeroImg3 from '../assets/home-hero-page3.png'
+import homeHeroImg4 from '../assets/home-hero-page4.png'
 import productsInBox from '../assets/products-in-box.png'
 import img1 from '../assets/img1.png'
 import img2 from '../assets/img2.png'
@@ -13,12 +15,24 @@ import baldonado from '../assets/baldonado.png'
 import kuyaKim from '../assets/kuyakim.png'
 import piolo from '../assets/piolo.png'
 
+import React, { useRef, useState } from 'react';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import 'swiper/css/effect-fade';
+
+import { EffectFade, Autoplay, Pagination, Navigation } from 'swiper/modules';
+
 
 const Index = () => {
     return(
       <div>
         <Header/>
-        <section class="hero-section">
+        <div>
+          {/* <section class="hero-section">
 
             <div class="hero-container">
               <div class="hero-background-img">
@@ -40,7 +54,75 @@ const Index = () => {
               </div>
 
             </div>
-        </section>
+        </section> */}
+        </div>
+        
+        <Swiper
+        slidesPerView={1}
+        spaceBetween={30}
+        effect={'fade'}
+        loop={true}
+        centeredSlides={true}
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: false,
+        }}
+        
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[EffectFade,Autoplay, Pagination, Navigation]}
+        className="mySwiper"
+      >
+        <SwiperSlide>
+          <a href="/products">
+            <button className='home-hero-btn button1'>SHOP NOW</button>
+          </a>
+          <img src={homeHeroImg3} alt="hero-img1" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <a href="/subscriptions">
+            <button className='home-hero-btn button2'>SUBSCRIBE</button>
+          </a>
+          <a href="#faqs-navigator">
+            <button className='home-hero-btn button3'>Explore <i class="fa-solid fa-paw"></i></button>
+          </a>
+          <img src={homeHeroFinal} alt="hero-img2" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <a href="/signup">
+            <button className='home-hero-btn button4'>REGISTER</button>
+          </a>
+          <img src={homeHeroImg4} alt="hero-img1" />
+        </SwiperSlide>
+      </Swiper>
+
+        {/* <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <a href="/products"><button className='home-hero-btn button1'>SHOP NOW!</button></a>
+            <img src={homeHeroImg3} class="d-block w-100" alt="purrpicks-hero-img3"/>
+          </div>
+          <div class="carousel-item">
+          <a href="/subscriptions"><button className='home-hero-btn  button2'>SUBSCRIBE</button></a>
+          <a href="/subscriptions"><button className='home-hero-btn  button3'>Explore <i class="fa-solid fa-paw"></i></button></a>
+            <img src={homeHeroFinal} class="d-block w-100" alt="purrpicks-hero-img1"/>
+          </div>
+          <div class="carousel-item">
+            <a href="/signup"><button className='home-hero-btn  button4'>SIGN UP!</button></a>
+            <img src={homeHeroImg4} class="d-block w-100" alt="purrpicks-hero-img4"/>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+        </div> */}
 
         <section class="products-hero-section">
           <div class="products-hero-container">
@@ -75,7 +157,7 @@ const Index = () => {
           
               <div class="face face2">
                 <div class="faqs-content">
-                  <p>Answer the pet survey in the “Subscription Page” to be subscribed with us. Purrfect Picks will give a recommended box subscription according to your pet needs. 
+                  <p>Register to Purrfect Picks to create an account and start shopping. Choose products or subscribe for monthly box of goodness for your fur friends!
                   </p>
                 </div>
               </div>
@@ -91,7 +173,7 @@ const Index = () => {
           
               <div class="face face2">
                 <div class="faqs-content">
-                  <p>We calculate the pet supplies for your fur friends. The supplies that will be given is thoroughly calculated together with instructions and guides with it.
+                  <p>After purchasing, we will immediately ship your package. For your subscriptions, we automatically calculate your pets' needed supply monthly base on their background. 
                   </p>
                 </div>
               </div>

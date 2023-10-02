@@ -62,12 +62,7 @@ const Header = (props) => {
                 <NavLink href="/subscriptions" id='subs'>Subscriptions</NavLink>
                 <NavLink href="/products" id='prods'>Products</NavLink>
                 <NavLink href="/clinic" id='clinic'>Clinic</NavLink>
-                <NavLink href="/cart">
-                    <span className=" text-muted float-end mx-2">
-                        <MDBIcon className="text-light" icon="cart-shopping" />
-                        <span className='text-light mx-2'> Cart {count} </span>
-                    </span> 
-                </NavLink>
+                
                 {
                     user ? 
                     <NavLink>
@@ -97,6 +92,12 @@ const Header = (props) => {
                     :
                     <NavLink href="/login">Login/Signup</NavLink>
                 }
+                <NavLink href="/cart">
+                    <span className=" text-muted float-end mx-2">
+                        <MDBIcon className="text-light" icon="cart-shopping" />
+                        <span className='text-light mx-2'> Cart {count} </span>
+                    </span> 
+                </NavLink>
                 </div>
                 
             <NavbarToggler onClick={toggle}/>
