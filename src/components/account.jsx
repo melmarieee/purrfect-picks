@@ -74,7 +74,7 @@ const Account = () => {
         setButtonShipping("")
     }
     return(
-        <div>
+        <div className='account-page'>
             <Header/>
             <div class='container-fluid pt-5'>
                 <h3 class="px-4 pt-5">Manage my account</h3>
@@ -92,7 +92,7 @@ const Account = () => {
                             <input defaultValue={user.name} type="text" disabled={enableInputProfile} class="form-control" id="exampleInputName"/>
                             <br />
                             <label for="exampleInputEmail1" class="form-label">Email address</label>
-                            <input defaultValue={user.email} type="email" disabled={enableInputProfile} class="form-control" id="exampleInputEmail1"/>
+                            <input defaultValue={user.email} type="email" disabled={enableInputProfile} class="form-control" id="exampleInputName"/>
                             <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
 
                             <label for="exampleInputName" class="form-label">Age:</label>
@@ -119,7 +119,7 @@ const Account = () => {
                                             <img src={Gcash} alt="avatar" className="img-fluid mx-2" />
                                         </div>
                                         <div className='col-md-10'>
-                                            <input defaultValue={user.billing_information.gcash} type="text" disabled={enableInputBill} class="form-control p-1" id="exampleInputEmail1"/>
+                                            <input defaultValue={user.billing_information.gcash} type="text" disabled={enableInputBill} class="form-control p-1" id="exampleInputName"/>
                                         </div>
                                     </div>
                                 </form>
@@ -136,13 +136,13 @@ const Account = () => {
                                     </div>
                             <form action="">
                                     <label for="exampleInputEmail1" class="form-label">Address</label>
-                                    <input defaultValue={user.shipping_information.address} type="email" disabled={enableShipping} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+                                    <input defaultValue={user.shipping_information.address} type="email" disabled={enableShipping} class="form-control" id="exampleInputName" aria-describedby="emailHelp"/>
                                     
                                     <label for="exampleInputNumber" class="form-label">Contact Number</label>
-                                    <input defaultValue={user.shipping_information.number} type="number" disabled={enableShipping} class="form-control" id="exampleInputNumber"/>
+                                    <input defaultValue={user.shipping_information.number} type="number" disabled={enableShipping} class="form-control" id="exampleInputName"/>
 
                                     <label for="exampleInputZip" class="form-label">Zip Code</label>
-                                    <input defaultValue={user.shipping_information.zip_code} type="number" disabled={enableShipping} class="form-control" id="exampleInputZip"/>
+                                    <input defaultValue={user.shipping_information.zip_code} type="number" disabled={enableShipping} class="form-control" id="exampleInputName"/>
                             </form>
                             <div className='submit-info p-3'>
                                 {showButtonShipping}
@@ -158,8 +158,8 @@ const Account = () => {
                     {
                     user.pets.map(
                         (pet, _) => 
-                        <div class="card col-md-3">
-                            <img class="card-img-top" src={kaori} alt="Card image cap"/>
+                        <div class="card petcard col-md-3">
+                            <img class="card-img-top petimg" src={pet.img} alt="Card image cap"/>
                             <div class="card-body">
                                 <h3 class="card-title">{pet.name}</h3>
                                 <p>Breed: Shihtzu</p>

@@ -1,6 +1,9 @@
 import '../css/login.css'
 import purfectlogo from '../assets/purfectLogo.png'
 import loginBG from '../assets/login-bg.png'
+import sixtoh from '../assets/sixtoh.jpeg'
+import kendra from '../assets/kendra.jpeg'
+import kaori from '../assets/kaori.jpg'
 
 import { useState } from 'react'
 
@@ -23,7 +26,7 @@ const users = [
                 name: "Stella",
                 age: 2,
                 breed: "Shitzu",
-                weight: "8",
+                weight: "8kg",
                 img: null,
                 subscriptions: [
                     "SD BASIC",
@@ -35,7 +38,7 @@ const users = [
                 age: 1,
                 img: null,
                 breed: "K9",
-                weight: "30",
+                weight: "30kg",
                 subscriptions: [
                     "LG DOG"
                 ]
@@ -60,8 +63,28 @@ const users = [
                 name: "Kaori",
                 age: 2,
                 breed: "Shitzu",
-                weight: "7",
-                img: null,
+                weight: "7kg",
+                img: kaori,
+                subscriptions: [
+                    "SD BASIC"
+                ]
+            },
+            {
+                name: "Sixtoh",
+                age: 4,
+                breed: "Shitzu",
+                weight: "6.7kg",
+                img: sixtoh,
+                subscriptions: [
+                    "SD BASIC"
+                ]
+            },
+            {
+                name: "Kendra",
+                age: 6,
+                breed: "Shitzu",
+                weight: "6.4kg",
+                img: kendra,
                 subscriptions: [
                     "SD BASIC"
                 ]

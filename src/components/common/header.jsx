@@ -65,7 +65,7 @@ const Header = (props) => {
                 <div className="header-navbar-links">
                 <NavLink href="/subscriptions" id='subs'>Subscriptions</NavLink>
                 <NavLink href="/products" id='prods'>Products</NavLink>
-                <NavLink href="/cart">
+                <NavLink href="/cart" id='carts'>
                     <span className=" text-muted float-end mx-2">
                         <MDBIcon className="text-light" icon="cart-shopping" />
                         <span className='text-light mx-2'> Cart {count} </span>
@@ -73,7 +73,7 @@ const Header = (props) => {
                 </NavLink>
                 {
                     user ? 
-                    <NavLink>
+                    <NavLink id='my-account'>
                         {user.name}
                         <UncontrolledDropdown group direction="down">
                             <DropdownToggle

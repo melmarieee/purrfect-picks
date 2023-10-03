@@ -107,7 +107,7 @@ const Carts = () => {
         )
     }
     return(
-        <div>
+        <div className='cart-page'>
             <Header/>
             <div class='container-fluid pt-5'>
                 <Modal isOpen={modal} toggle={toggleModalClose}>
@@ -132,7 +132,7 @@ const Carts = () => {
                             {
                                 carts.map(
                                     (cart, index) => 
-                                    <div class="row p-4 bg-white mx-1 my-3">
+                                    <div class="row p-4 bg-white mx-1 my-3 added-item-container">
                                         <div class="col-md-2 text-center">
                                             <img class="img-fluid" src={cart.img}/>
                                         </div>
@@ -206,7 +206,7 @@ const Carts = () => {
                             }
                         </div>
                         <div class={carts.length == 0 ? "d-none" : "col-md-3"}>
-                            <div class="bg-white p-5 mt-3">
+                            <div class="bg-white p-5 mt-3 cart-detail-container">
                                 <div>
                                     <h4>Order Summary</h4>
                                     <div class="row">
