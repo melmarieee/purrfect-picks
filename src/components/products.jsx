@@ -235,7 +235,7 @@ const Products = (props) => {
           <div class="container">
             <div class="product-filter px-3 pt-3 pb-1 mb-4">
               <FormGroup row>
-                <Label for="searchProduct" md={1}>Search:</Label>
+                <Label for="searchProduct" md={1} id='search-label'>Search:</Label>
                 <Col md={11}>
                   <Input id="searchProduct" onChange={searchProduct.bind(this)} type="email" name="email" placeholder="Search product" />
                 </Col>

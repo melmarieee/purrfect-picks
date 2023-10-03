@@ -41,6 +41,10 @@
    width: 600px;
    min-width: 100px;
 }
+#search-label{
+   font-family: 'Dm Sans';
+   font-weight: 600;
+}
 @media (max-width:1024px){
    .hero-prods-container{
       padding: 0 30px 0 0;
