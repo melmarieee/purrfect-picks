@@ -9,16 +9,16 @@ const updateAlert = () => {
 }
 
 const Footer = () => {
-    return(
+  return(
     <footer>
         <div class="footer-container">
           <div class="footer-col1">
             <h5>STAY UPDATED</h5>
             <p>Input your email for latest updates</p>
-              <div class="input-group mb-3">
-                <input type="text" class="form-control" name='update-btn' placeholder="purrpicks@gmail.com" aria-label="Example text with button addon" aria-describedby="button-addon1" required/>
-                <button class="btn btn-outline-secondary" name='update-btn' type="button" id="button-addon1" onClick={updateAlert}>Submit</button>
-              </div>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" name='update-btn' placeholder="purrpicks@gmail.com" aria-label="Example text with button addon" aria-describedby="button-addon1" required/>
+              <button class="btn btn-outline-secondary" name='update-btn' type="button" id="button-addon1" onClick={updateAlert}>Submit</button>
+            </div>
 
           </div>
           <div class="footer-col2">
@@ -38,9 +38,9 @@ const Footer = () => {
         </div>
     
     
-    <center><p id="copyright-text">Purrfect Picks © 2023.</p></center>
-      </footer>
-    )
+      <center><p id="copyright-text">Purrfect Picks © 2023.</p></center>
+    </footer>
+  )
 }
 
 export default Footer;

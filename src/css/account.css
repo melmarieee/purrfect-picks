@@ -79,3 +79,14 @@
 .account-container{
     height: 100%;
 }
+.my-pets-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+.petcard{
+    padding: 15px;
+    border-radius: 15px;
+}
+.petimg{
+    border-radius: 15px;
+}

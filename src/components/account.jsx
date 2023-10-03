@@ -103,6 +103,7 @@ const Account = () => {
                         </div>
                       </div>
                    </div>
+                   
                    <div className='col-md-4'>
                         <div className='account-info p-3  bg-white account-container'>
                             <h4 className='text-center'>Billing Information</h4>
@@ -128,6 +129,7 @@ const Account = () => {
                             </div>
                         </div> 
                    </div>
+
                    <div className='col-md-4'>
                         <div className='account-info p-3  bg-white account-container'>
                                 <h4 className='text-center'>Shipping Information</h4>
@@ -142,8 +144,6 @@ const Account = () => {
 
                                     <label for="exampleInputNumber" class="form-label">Contact Number</label>
                                     <input defaultValue={user.shipping_information.number} type="number" disabled={enableShipping} class="form-control" id="exampleInputName"/>
-
-                                    <input defaultValue={user.shipping_information.number} type="number" disabled={enableShipping} class="form-control" id="exampleInputNumber"/>
                                     
                                     <br />
                                     <label for="exampleInputZip" class="form-label">Zip Code</label>
@@ -154,12 +154,14 @@ const Account = () => {
                             </div>
                         </div>
                    </div>
+
                 </div>
             </div>
+
             <h3 class="px-5 p-3">My Pets</h3>
             <hr class="m-5"/>
             <div className='container-fluid px-5 py-2'>
-                <div class="row">
+                <div class="row my-pets-container">
                     {
                     user.pets.map(
                         (pet, _) => 

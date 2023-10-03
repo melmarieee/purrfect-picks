@@ -1,111 +1,77 @@
+.login-page{
+    padding: 0 30px 40px;
+    margin-top: -20px;
+    font-family: 'Dm Sans';
+}
 .login-container{
-    width: 100%;
-    background-color: #E9E9E9;
-    border-radius: 10px;
-}
-
-.login-form-contaniner {
-    padding-top: 30px;
-}
-.image-login{
-    padding: 30px 30px;
-    background-color: #952322;
-    padding-block: auto;
-    height: 100%;
-    position: fixed;
-    right: 0;
-}
-
-.enter-details-font {
-    color: gray ;
-    font-size: 14px;
-}
-body{
-    background-color:#E9E9E9;
-}
-
-.login-bg-container{
- width: 100%;
- position: relative;
- margin-block: auto;
- 
-}
-.bot-pic-rotate {
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-}
-.login-bg-container a{
-    color: gray;
-    text-decoration: none;
-}
-.login-flex-container{
+    background-color: white;
+    border-radius: 20px;
     display: flex;
 }
-.logIn{
-    margin-top: -50px;
+.purrpicks-logo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.form-control{
-    width: 65%;
+.purrfectpicks-logo{
+    width: 200px;
+    margin: 20px 0;
 }
-.input-container{
+
+
+.login-form-container{
+    width: 100%;
+    padding: 30px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
 }
-.form-check {
+.login-hero-container{
+    background-image: url(../assets/login-hero-img.png);
+    background-size: cover;
+    width: 100%;
+    border-radius: 0 20px 20px 0;
+}
+
+.login-input-container{
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    text-align: left;
-    gap: 10px;
+    flex-direction: column;
 }
-.needs-validation{
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding-left: 50px;
+.login-input{
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid #a7a7a7;
 }
-.signup-option{
-    padding-left: 65px;
+.login-checkbox-label{
+    margin: 15px 0 5px;
 }
-@media (max-width:768px){
-    .image-login{
+.login-submit-button{
+    background-color: cadetblue;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    height: 35px;
+    width: 100%;
+    color: #FFF;
+}
+.login-submit-button:hover{
+    background-color: #952322;
+}
+.login-checkbox{
+    margin-right: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .login-hero-container{
         display: none;
     }
-    .form-control{
-        width: 100%;
+    .login-input{
+        height: 30px;;
     }
-    .needs-validation{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-inline: auto;
-        padding: 0;
-    }
-    .login-form-contaniner {
-        margin-inline: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    .input-container{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin-inline: auto;
-        width: 320px;
-    }
-    .form-control{
-        margin-inline: auto;
-    }
-    .login-heading{
-        text-align: center;
-    }
-    .lg-btn-container, .form-check, .signup-option{
-        display: flex;
-        justify-content: center;
-        padding: 0;
+}
+@media screen and (max-width: 420px) {
+    .login-input{
+        height: 20px;;
     }
 }

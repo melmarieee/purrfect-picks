@@ -1,8 +1,7 @@
 import '../css/tracker.css'
 import Header from './common/header'
 import Footer from './common/footer'
-import dogFood from '../assets/dogFood.png'
-import petVits from '../assets/petVits.png'
+
 import {
     MDBCard,
     MDBCardBody,
