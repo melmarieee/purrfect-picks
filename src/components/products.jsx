@@ -13,6 +13,14 @@ import dogTreats from '../assets/dogTreats.png'
 import catTreats from '../assets/catTreats.png'
 import petVits from '../assets/petVits.png'
 import prodsHeroImg from '../assets/product-hero-img.png'
+import accessory1 from '../assets/accessory1.png'
+import accessory2 from '../assets/accessory2.png'
+import accessory3 from '../assets/accessory3.png'
+import accessory4 from '../assets/accessory4.png'
+import accessory5 from '../assets/accessory5.png'
+import accessory6 from '../assets/accessory6.png'
+import accessory7 from '../assets/accessory7.png'
+import accessory8 from '../assets/accessory8.png'
 
 import { Button, Modal, ModalHeader, ModalFooter, ModalBody } from 'reactstrap';
 
@@ -65,6 +73,62 @@ const product_data = [
     img: petVits,
     title: "Purrpicks Vitamins",
     description: "Elevate your pet's health with our 10-in-1 Pet Multivitamins! Packed with essential nutrients, these easy-to-administer supplements support your furry friend's vitality, immunity, and overall well-being.",
+    price: 299,
+    service_type: "product",
+  },
+  {
+    img: accessory1,
+    title: "Slow Feeder Bowl",
+    description: "These bowls help prevent rapid consumption of food, reduce the risk of digestive problems, and promote healthier eating habits in pets.",
+    price: 169,
+    service_type: "product",
+  },
+  {
+    img: accessory2,
+    title: "Fun Feeder Bowl",
+    description: "These bowls features intricate patterns or puzzles that challenge pets to work for their food, providing mental stimulation and slowing down their eating pace.",
+    price: 219,
+    service_type: "product",
+  },
+  {
+    img: accessory3,
+    title: "Pet Wipes",
+    description: "Pet wipes are moist towelettes specifically formulated for cleaning and refreshing your furry companion. They are convenient for quickly cleaning your pet's paws, fur, or face, and they can help eliminate odors while keeping your pet feeling fresh between baths.",
+    price: 99,
+    service_type: "product",
+  },
+  {
+    img: accessory4,
+    title: "Pet Carrying Bag",
+    description: "A portable and comfortable bag designed for safely transporting small pets, allowing you to take your furry friends on the go with ease and convenience. Made of PVC and petsafe materials",
+    price: 299,
+    service_type: "product",
+  },
+  {
+    img: accessory5,
+    title: "Pet Grooming Brush",
+    description: " An essential tool for maintaining your pet's coat health and appearance, designed with bristles or teeth that effectively remove loose fur, tangles, and mats, while also stimulating your pet's skin and promoting blood circulation.",
+    price: 299,
+    service_type: "product",
+  },
+  {
+    img: accessory6,
+    title: "Nail Grooming Clipper",
+    description: "A precision tool designed for safely and efficiently trimming your pet's nails, helping maintain their paw health and preventing discomfort or injury.",
+    price: 299,
+    service_type: "product",
+  },
+  {
+    img: accessory7,
+    title: "Dog Dental Chews",
+    description: "Tasty treats specially formulated to help improve your dog's oral health by reducing plaque, tartar buildup, and promoting fresh breath while providing a delicious snack they'll love.",
+    price: 299,
+    service_type: "product",
+  },
+  {
+    img: accessory8,
+    title: "Cat Dental Chews",
+    description: "Flavorful treats designed to enhance your cat's dental hygiene by reducing plaque and tartar buildup while delivering a tasty and enjoyable snack for your feline friend.",
     price: 299,
     service_type: "product",
   }
@@ -122,7 +186,7 @@ const Products = (props) => {
               <h1>Quality Products Create<br/>
                   Healthier & Happier Pets 
               </h1>
-              <p>We create healthy, well-balanced, organic<br/> and hypo-allergenic products for your furry friend</p>    
+              <p>We create healthy, well-balanced, organic<br/> and animal safe products for your furry friends</p>    
             </div>
             <img src={prodsHeroImg} alt="purrfect-picks-hero-img" id='prodHeroImg'/>
             
@@ -155,16 +219,6 @@ const Products = (props) => {
             </ModalFooter>
         </Modal>
         <main class="products-section">
-          {/* <div className="hero-prods-container">
-            <div className='prods-hero-texts'>
-              <h1>Quality Products Create<br/>
-                  Healthier & Happier Pets 
-              </h1>
-              <p>We create healthy, well-balanced, organic<br/> and hypo-allergenic products for your furry friend</p>    
-            </div>
-            <img src={prodsHeroImg} alt="purrfect-picks-hero-img" id='prodHeroImg'/>
-            
-          </div> */}
           <div class="container">
             <div class="products-container">
                 {

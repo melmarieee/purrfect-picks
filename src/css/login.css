@@ -3,20 +3,9 @@
     background-color: #E9E9E9;
     border-radius: 10px;
 }
-.buttonsubmit{
-    text-align: center;
-    background-color: #952322 !important;
-    border: none;
-    width: 130px;
-    padding-block: 3px;
-    border-radius: 20px;
-    justify-content: left !important;
-}
+
 .login-form-contaniner {
-    padding-top: 50px;
-    padding-bottom: 30px;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-top: 30px;
 }
 .image-login{
     padding: 30px 30px;
@@ -62,18 +51,23 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
 }
 .form-check {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    gap: 10px;
 }
 .needs-validation{
-    justify-content: center;
-    align-items: center !important;
-    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 50px;
+}
+.signup-option{
+    padding-left: 65px;
 }
 @media (max-width:768px){
     .image-login{
@@ -81,5 +75,37 @@ body{
     }
     .form-control{
         width: 100%;
+    }
+    .needs-validation{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-inline: auto;
+        padding: 0;
+    }
+    .login-form-contaniner {
+        margin-inline: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .input-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-inline: auto;
+        width: 320px;
+    }
+    .form-control{
+        margin-inline: auto;
+    }
+    .login-heading{
+        text-align: center;
+    }
+    .lg-btn-container, .form-check, .signup-option{
+        display: flex;
+        justify-content: center;
+        padding: 0;
     }
 }

@@ -116,9 +116,9 @@ const Login = () => {
                     <div class="login-form-contaniner">
                         <form onSubmit={handleSubmit} class="row g-3 needs-validation" validate>
                             <div class="text-center">
-                                <a href="/"><img src={purfectlogo} alt="purrfect-picks-logo" width="55%" class="pb-5 img-fluid"/></a>
+                                <a href="/"><img src={purfectlogo} alt="purrfect-picks-logo" width="40%" class="pb-5 img-fluid"/></a>
                             </div>
-                            <div>
+                            <div className='login-heading'>
                                 <h1><b>Welcome Back Hooman!</b></h1>
                                 <p class="enter-details-font">Please enter your details</p>
                             </div>
@@ -141,14 +141,14 @@ const Login = () => {
                                 </label>
                             </div>
                             </div>
-                            <div>
+                            <div className='lg-btn-container'>
                                 {showError}
-                                <button class="btn btn-primary buttonsubmit mt-2 btn-lg" type="submit">Log in</button>
+                                <button class="btn btn-secondary buttonsubmit mt-2 btn-lg" type="submit">Log in</button>
                             </div>
-                        </form>
+                        </form><br/>
                     </div>
                     <div class="row">
-                        <div class="col-md-12 text-center pb-4">
+                        <div class="col-md-12 text-left pb-4 signup-option">
                             <span>Don't have an account? <a href="/signup"> Signup</a></span>
                         </div>
                     </div>
