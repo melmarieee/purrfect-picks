@@ -72,14 +72,10 @@
     border: solid #952322 2px;
 }
 
-#exampleInputName {
+.addPet-info {
     width: 100% !important;
 }
-.petcard{
-    padding: 15px;
-    margin-inline: 10px;
-    border-radius: 15px;
-}
-.petimg{
-    border-radius: 15px;
+
+.account-container{
+    height: 100%;
 }
