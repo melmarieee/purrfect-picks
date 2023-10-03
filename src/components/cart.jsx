@@ -237,8 +237,15 @@ const Carts = () => {
                                 <hr/>
                                 <div>
                                     <h4>Shipping details</h4>
-                                    <p>{user_sessions.name} ({user_sessions.billing_information.gcash})</p>
-                                    <p>{user_sessions.shipping_information.address}</p>
+                                    {
+                                        user_sessions ? 
+                                            <div>
+                                                <p>{user_sessions.name} ({user_sessions.billing_information.gcash})</p>
+                                                <p>{user_sessions.shipping_information.address}</p>
+                                            </div>
+                                            :
+                                            ""
+                                    }
                                 </div>
                                 <hr/>
                                 <div>
