@@ -157,7 +157,7 @@ const Products = (props) => {
 
       product_data.map(
         (product) => {
-          if (product.title.includes(event.target.value)) { 
+          if (product.title.toLowerCase().includes(event.target.value.toLowerCase())) { 
             new_filtered_product.push(product)
           }
         }
