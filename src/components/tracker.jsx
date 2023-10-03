@@ -16,9 +16,13 @@ import {
     MDBRow,
     MDBTypography,
   } from "mdb-react-ui-kit";
-  import React from "react";
+  import React, {useState} from 'react';
   
 function Tracker() {
+  const [trackings, setTrackings] = useState(
+    JSON.parse(window.localStorage.getItem("tracker"))
+  );
+
     return (
       <>
      <Header/>
@@ -48,176 +52,96 @@ function Tracker() {
                         Receipt Voucher : 1KAU9-84UIL
                       </p>
                     </div>
-  
-                    <MDBCard className="shadow-0 border mb-4">
-                      <MDBCardBody>
-                        <MDBRow>
-                          <MDBCol md="2">
-                            <MDBCardImage
-                              src={dogFood}
-                              fluid
-                              alt="Phone"
-                            />
-                          </MDBCol>
-                          <MDBCol
-                            md="2"
-                            className="text-center d-flex justify-content-center align-items-center"
-                          >
-                            <p className="text-muted mb-0">Purrpicks Dog Food</p>
-                          </MDBCol>
-                          <MDBCol
-                            md="2"
-                            className="text-center d-flex justify-content-center align-items-center"
-                          >
-                            <p className="text-muted mb-0 small">Basic</p>
-                          </MDBCol>
-                          <MDBCol
-                            md="2"
-                            className="text-center d-flex justify-content-center align-items-center"
-                          >
-                            <p className="text-muted mb-0 small">
-                              Kilogram/s: 30Kg
-                            </p>
-                          </MDBCol>
-                          <MDBCol
-                            md="2"
-                            className="text-center d-flex justify-content-center align-items-center"
-                          >
-                            <p className="text-muted mb-0 small">Qty: 1</p>
-                          </MDBCol>
-                          <MDBCol
-                            md="2"
-                            className="text-center d-flex justify-content-center align-items-center"
-                          >
-                            <p className="text-muted mb-0 small">₱ 299.00</p>
-                          </MDBCol>
-                        </MDBRow>
-                        <hr
-                          className="mb-4"
-                          style={{ backgroundColor: "#e0e0e0", opacity: 1 }}
-                        />
-                        <MDBRow className="align-items-center">
-                          <MDBCol md="2">
-                            <p className="text-muted mb-0 small">Track Order</p>
-                          </MDBCol>
-                          <MDBCol md="10">
-                            <MDBProgress
-                              style={{ height: "6px", borderRadius: "16px" }}
-                            >
-                              <MDBProgressBar
-                                style={{
-                                  borderRadius: "16px",
-                                  backgroundColor: "#E9B824",
-                                }}
-                                width={65}
-                                valuemin={0}
-                                valuemax={100}
+                    {
+                      trackings.carts.map(
+                          (track, index) => 
+                          <MDBCard className="shadow-0 border mb-4">
+                            <MDBCardBody>
+                              <MDBRow>
+                                <MDBCol md="2">
+                                  <MDBCardImage
+                                    src={track.img}
+                                    fluid
+                                    alt="Phone"
+                                  />
+                                </MDBCol>
+                                <MDBCol
+                                  md="4"
+                                  className="text-center d-flex justify-content-center align-items-center"
+                                >
+                                  <p className="text-muted mb-0">{track.title}</p>
+                                </MDBCol>
+                                <MDBCol
+                                  md="2"
+                                  className="text-center d-flex justify-content-center align-items-center"
+                                >
+                                  <p className="text-muted mb-0 small">{track.service_type}</p>
+                                </MDBCol>
+                                <MDBCol
+                                  md="2"
+                                className="text-center d-flex justify-content-center align-show_live_test.exs:297items-center"
+                                >
+                                  <p className="text-muted mb-0 small">Qty: {trackings.carts_index[index]}</p>
+                                </MDBCol>
+                                <MDBCol
+                                  md="2"
+                                  className="text-center d-flex justify-content-center align-items-center"
+                                >
+                                  <p className="text-muted mb-0 small"><b>₱ {track.price}</b></p>
+                                </MDBCol>
+                              </MDBRow>
+                              <hr
+                                className="mb-4"
+                                style={{ backgroundColor: "#e0e0e0", opacity: 1 }}
                               />
-                            </MDBProgress>
-                            <div className="d-flex justify-content-around mb-1">
-                              <p className="text-muted mt-1 mb-0 small ms-xl-5">
-                                Out for delivery
-                              </p>
-                              <p className="text-muted mt-1 mb-0 small ms-xl-5">
-                                Delivered
-                              </p>
-                            </div>
-                          </MDBCol>
-                        </MDBRow>
-                      </MDBCardBody>
-                    </MDBCard>
-  
-                    <MDBCard className="shadow-0 border mb-4">
-                      <MDBCardBody>
-                        <MDBRow>
-                          <MDBCol md="2">
-                            <MDBCardImage
-                              src={petVits}
-                              fluid
-                              alt="Phone"
-                            />
-                          </MDBCol>
-                          <MDBCol
-                            md="2"
-                            className="text-center d-flex justify-content-center align-items-center"
-                          >
-                            <p className="text-muted mb-0">Purrpicks Multivitamins</p>
-                          </MDBCol>
-                          <MDBCol
-                            md="2"
-                            className="text-center d-flex justify-content-center align-items-center"
-                          >
-                            <p className="text-muted mb-0 small">Vitamin</p>
-                          </MDBCol>
-                          <MDBCol
-                            md="2"
-                            className="text-center d-flex justify-content-center align-items-center"
-                          >
-                            <p className="text-muted mb-0 small">
-                              Milligram: <br/>
-                               125 mg/ml
-                            </p>
-                          </MDBCol>
-                          <MDBCol
-                            md="2"
-                            className="text-center d-flex justify-content-center align-items-center"
-                          >
-                            <p className="text-muted mb-0 small">Qty: 1</p>
-                          </MDBCol>
-                          <MDBCol
-                            md="2"
-                            className="text-center d-flex justify-content-center align-items-center"
-                          >
-                            <p className="text-muted mb-0 small">₱ 299.00</p>
-                          </MDBCol>
-                        </MDBRow>
-                        <hr
-                          className="mb-4"
-                          style={{ backgroundColor: "#e0e0e0", opacity: 1 }}
-                        />
-                        <MDBRow className="align-items-center">
-                          <MDBCol md="2">
-                            <p className="text-muted mb-0 small">Track Order</p>
-                          </MDBCol>
-                          <MDBCol md="10">
-                            <MDBProgress
-                              style={{ height: "6px", borderRadius: "16px" }}
-                            >
-                              <MDBProgressBar
-                                style={{
-                                  borderRadius: "16px",
-                                  backgroundColor: "#E9B824",
-                                }}
-                                width={20}
-                                valuemin={0}
-                                valuemax={100}
-                              />
-                            </MDBProgress>
-                            <div className="d-flex justify-content-around mb-1">
-                              <p className="text-muted mt-1 mb-0 small ms-xl-5">
-                                Out for delivery
-                              </p>
-                              <p className="text-muted mt-1 mb-0 small ms-xl-5">
-                                Delivered
-                              </p>
-                            </div>
-                          </MDBCol>
-                        </MDBRow>
-                      </MDBCardBody>
-                    </MDBCard>
-  
+                              <MDBRow className="align-items-center">
+                                <MDBCol md="2">
+                                  <p className="text-muted mb-0 small">Track Order</p>
+                                </MDBCol>
+                                <MDBCol md="10">
+                                  <MDBProgress
+                                    style={{ height: "6px", borderRadius: "16px" }}
+                                  >
+                                    <MDBProgressBar
+                                      style={{
+                                        borderRadius: "16px",
+                                        backgroundColor: "#E9B824",
+                                      }}
+                                      width={10}
+                                      valuemin={0}
+                                      valuemax={100}
+                                    />
+                                  </MDBProgress>
+                                  <div className="d-flex justify-content-around mb-1">
+                                    <p className="text-muted mt-1 mb-0 small ms-xl-5">
+                                      To Ship
+                                    </p>
+                                    <p className="text-muted mt-1 mb-0 small ms-xl-5">
+                                      To Recieve
+                                    </p>
+                                    <p className="text-muted mt-1 mb-0 small ms-xl-5">
+                                      Delivered
+                                    </p>
+                                  </div>
+                                </MDBCol>
+                              </MDBRow>
+                            </MDBCardBody>
+                          </MDBCard>
+                      )
+                    }
+
                     <div className="d-flex justify-content-between pt-2">
                       <p className="fw-bold mb-0">Order Details</p>
                     </div>
                     <div className="d-flex justify-content-between pt-2">
                       <p className="text-muted mb-0">Invoice Number : 788152</p>
                       <p className="text-muted mb-0">
-                        <span className="fw-bold me-4">Total:</span> ₱ 598.00
+                        <span className="fw-bold me-4">Total:</span> ₱ {trackings.carts.reduce((sum, cart, index) => sum + cart.price * trackings.carts_index[index], 0)}
                       </p>
                     </div>
                     <div className="d-flex justify-content-between">
                       <p className="text-muted mb-0">
-                        Invoice Date : 02 Oct 2023
+                        Invoice Date : {new Date().toLocaleString().replace(',','')}
                       </p>
                       <p className="text-muted mb-0">
                         <span className="fw-bold me-4">Delivery Charges - </span>{""}
@@ -244,7 +168,7 @@ function Tracker() {
                       
                       className="d-flex align-items-center justify-content-end text-white text-uppercase mb-0"
                     >
-                      <b>Total paid:</b> <span className="mb-0 ms-2">₱ 663.00</span>
+                      <b>Total paid:</b> <span className="mb-0 ms-2">₱ {trackings.carts.reduce((sum, cart, index) => sum + cart.price * trackings.carts_index[index], 0) + 65}</span>
                     </MDBTypography>
                   </MDBCardFooter>
                 </MDBCard>

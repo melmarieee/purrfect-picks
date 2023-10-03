@@ -71,3 +71,7 @@
     color: #FFF;
     border: solid #952322 2px;
 }
+
+#exampleInputName {
+    width: 100% !important;
+}

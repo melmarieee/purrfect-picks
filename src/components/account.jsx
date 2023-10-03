@@ -4,6 +4,11 @@ import Footer from './common/footer'
 import { useState } from 'react'
 import kaori from '../assets/kaori.jpg'
 import Gcash from '../assets/Gcash.jpg'
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Col, Row } from 'reactstrap';
+
+
+
+
 
 const Account = () => {
     const user_session = window.localStorage.getItem("user");
@@ -15,6 +20,9 @@ const Account = () => {
     const [enableShipping, setShipping] = useState(true)
     const [showButtonShipping, setButtonShipping] = useState("")
     const [user, setUser] = useState(JSON.parse(user_session))
+    const [modal, setModal] = useState(false);
+    const toggle = () => setModal(!modal);
+ 
 
 
     let changeInfo = () => {
@@ -164,7 +172,56 @@ const Account = () => {
                         </div>
                     )
                     }
-                    
+                </div>
+                <div className='p-3'>
+                    <Button color="danger" onClick={toggle}>
+                            + Add Pet
+                    </Button>
+                    <Modal isOpen={modal} toggle={toggle}>
+                        <ModalHeader toggle={toggle}>Pet Information</ModalHeader>
+                            <ModalBody className=''>
+                                <form action="">
+                                    <FormGroup>
+                                        <Row>
+                                            <Col sm={3}>
+                                                <label for="exampleInputName" class="form-label">Pet Name:</label>
+                                            </Col>
+                                            <br/>
+                                            <Col sm={9}>
+                                            <input  type="text" class="form-control " id="exampleInputName"/>
+                                            </Col>
+                                        </Row>
+                                        
+                                    </FormGroup>
+                                    <FormGroup row>
+                                        <label for="exampleInputBreed" sm={2} class="form-label">Breed:</label>
+                                        <br/>
+                                        <Col sm={10}>
+                                        <input type="text" class="form-control" id="exampleInpuBreed"/>
+                                        </Col>
+                                    </FormGroup>
+                                    <FormGroup row>
+                                        <label for="exampleInputAge" sm={2} class="form-label">Age:</label>
+                                        <br/>
+                                        <Col sm={10}>
+                                        <input  type="text" class="form-control " id="exampleInputAge"/>
+                                        </Col>
+                                    </FormGroup>
+                                    <FormGroup row>
+                                        <label for="exampleInputkg" sm={2} class="form-label">Weight:</label>
+                                        <br/>
+                                        <Col sm={10}>
+                                        <input  type="text" class="form-control " id="exampleInputkg"/>
+                                        </Col>
+                                    </FormGroup>
+                                </form>
+                            </ModalBody>
+                        <ModalFooter>
+                            <Button color="secondary" onClick={toggle}>
+                                Submit
+                            </Button>
+                        </ModalFooter>
+                    </Modal>
                 </div>
             </div>
             <Footer/>
@@ -174,32 +231,3 @@ const Account = () => {
 
 export default Account;
 
-{/* <h5><b>Vaccination Certificate</b></h5> */}
-{/* <div className='table-container'>
-    <table class="table">
-        <thead>
-            <tr>
-            <th scope="col">Date</th>
-            <th scope="col">Vaccine</th>
-            <th scope="col">Product Name</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-            <td>03/23/22</td>
-            <td>Deworm</td>
-            <td>Benzimidazoles</td>
-            </tr>
-            <tr>
-            <td>04/11/22</td>
-            <td>Rabbies</td>
-            <td>Rabisin</td>
-            </tr>
-            <tr>
-            <td>08/19/23</td>
-            <td>Bordetella</td>
-            <td>Vanguard B</td>
-            </tr>
-        </tbody>
-    </table>
-</div>   */}

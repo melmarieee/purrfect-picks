@@ -10,23 +10,10 @@ import Account from './components/account'
 import Subscriptions from './components/subscriptions'
 import Cart from './components/cart'
 import Clinic from './components/Clinic'
-import dogFood from './assets/dogFood.png'
 import Tracker from "./components/tracker";
-
-// const Login []
 
 
 function App() {
-  const carts = [
-    {
-      id: 1,
-      name: "Aozi 30 KG Sack",
-      type: "product",
-      image_src: dogFood,
-      description: "Younger than 10 months of age, also suitable for Pregnant and Lactating Dogs",
-      price: 5000,
-    },
-  ]
   
   const router = createBrowserRouter([
     {
