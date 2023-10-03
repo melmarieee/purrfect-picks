@@ -15,19 +15,36 @@ import {
     MDBProgressBar,
     MDBRow,
     MDBTypography,
+    MDBIcon
   } from "mdb-react-ui-kit";
   import React, {useState} from 'react';
   
 function Tracker() {
-  const [trackings, setTrackings] = useState(
+  const [trackings, _] = useState(
+    window.localStorage.getItem("tracker") ?
     JSON.parse(window.localStorage.getItem("tracker"))
+    :
+    {carts: []}
   );
+  let checkCart = ""
+
+  if (trackings.carts.length == 0) {
+    checkCart = (
+        <div class="text-center m-6 margin-no-cart">
+            <MDBIcon className="text-dark fa-3x mx-3" fas icon="cart-shopping" /> 
+            <center><h3 class="text-secondary">TRACKINGS IS EMPTY</h3>
+            <a href="/products"><button className='cart-btn'>SHOP NOW!</button></a>
+            </center>
+        </div>
+    )
+  }
 
     return (
       <>
      <Header/>
+        {checkCart}
         <section
-          className="h-100"
+          className={`h-100 ${trackings.carts.length == 0 ? "d-none" : ""}`}
           style={{ backgroundColor: "#eee" }}
         >
           <MDBContainer className="py-5 h-100">
@@ -79,7 +96,7 @@ function Tracker() {
                                 </MDBCol>
                                 <MDBCol
                                   md="2"
-                                className="text-center d-flex justify-content-center align-show_live_test.exs:297items-center"
+                                className="text-center d-flex justify-content-center align-items-center"
                                 >
                                   <p className="text-muted mb-0 small">Qty: {trackings.carts_index[index]}</p>
                                 </MDBCol>
@@ -175,8 +192,8 @@ function Tracker() {
               </MDBCol>
             </MDBRow>
           </MDBContainer>
-          <Footer/>
         </section>
+        <Footer/>
       </>
     );
   }
