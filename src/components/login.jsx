@@ -27,7 +27,7 @@ const users = [
                 age: 2,
                 breed: "Shitzu",
                 weight: "8kg",
-                img: null,
+                img: sixtoh,
                 subscriptions: [
                     "SD BASIC",
                     "SD PREMIUM"
@@ -36,7 +36,7 @@ const users = [
             {
                 name: "Miyo",
                 age: 1,
-                img: null,
+                img: kaori,
                 breed: "K9",
                 weight: "30kg",
                 subscriptions: [

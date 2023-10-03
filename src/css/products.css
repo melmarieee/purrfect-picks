@@ -273,3 +273,12 @@
    margin-left: 15px;
    text-align: center;
 }
+
+.product-filter {
+   background-color: white;
+   border-radius: 5px;
+}
+
+#searchProduct {
+   width: 250px;
+}
