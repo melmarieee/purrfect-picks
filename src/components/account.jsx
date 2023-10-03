@@ -81,7 +81,7 @@ const Account = () => {
                 <hr class="m-4"/>
                 <div class='row px-4'>
                    <div className='col-md-4'>
-                      <div className="account-info p-3 bg-white">
+                      <div className="account-info p-3 bg-white account-container">
                         <h4 className='text-center'>Profile Information</h4>
                         <div className="edit-info">
                             <span><u onClick={changeInfo}>Edit</u></span>
@@ -104,7 +104,7 @@ const Account = () => {
                       </div>
                    </div>
                    <div className='col-md-4'>
-                        <div className='account-info p-3  bg-white'>
+                        <div className='account-info p-3  bg-white account-container'>
                             <h4 className='text-center'>Billing Information</h4>
                                 <div className="edit-info">
                                     <span><u onClick={changeInfoBill}>Edit</u></span>
@@ -129,7 +129,7 @@ const Account = () => {
                         </div> 
                    </div>
                    <div className='col-md-4'>
-                        <div className='account-info p-3  bg-white'>
+                        <div className='account-info p-3  bg-white account-container'>
                                 <h4 className='text-center'>Shipping Information</h4>
                                     <div className="edit-info">
                                         <span><u onClick={changeShipping}>Edit</u></span>
@@ -138,9 +138,12 @@ const Account = () => {
                                     <label for="exampleInputEmail1" class="form-label">Address</label>
                                     <input defaultValue={user.shipping_information.address} type="email" disabled={enableShipping} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
                                     
+                                    <br />
+
                                     <label for="exampleInputNumber" class="form-label">Contact Number</label>
                                     <input defaultValue={user.shipping_information.number} type="number" disabled={enableShipping} class="form-control" id="exampleInputNumber"/>
-
+                                    
+                                    <br />
                                     <label for="exampleInputZip" class="form-label">Zip Code</label>
                                     <input defaultValue={user.shipping_information.zip_code} type="number" disabled={enableShipping} class="form-control" id="exampleInputZip"/>
                             </form>
@@ -188,31 +191,42 @@ const Account = () => {
                                             </Col>
                                             <br/>
                                             <Col sm={9}>
-                                            <input  type="text" class="form-control " id="exampleInputName"/>
+                                            <input  type="text" class="form-control addPet-info" id="exampleInputName"/>
                                             </Col>
-                                        </Row>
-                                        
+                                        </Row> 
                                     </FormGroup>
-                                    <FormGroup row>
-                                        <label for="exampleInputBreed" sm={2} class="form-label">Breed:</label>
-                                        <br/>
-                                        <Col sm={10}>
-                                        <input type="text" class="form-control" id="exampleInpuBreed"/>
-                                        </Col>
+                                    <FormGroup>
+                                        <Row>
+                                            <Col sm={3}>
+                                                <label for="exampleInputBreed" class="form-label">Breed:</label>
+                                            </Col>
+                                            <br/>
+                                            <Col sm={9}>
+                                            <input  type="text" class="form-control addPet-info" id="exampleInputBreed"/>
+                                            </Col>
+                                        </Row> 
                                     </FormGroup>
-                                    <FormGroup row>
-                                        <label for="exampleInputAge" sm={2} class="form-label">Age:</label>
-                                        <br/>
-                                        <Col sm={10}>
-                                        <input  type="text" class="form-control " id="exampleInputAge"/>
-                                        </Col>
+                                    <FormGroup>
+                                        <Row>
+                                            <Col sm={3}>
+                                                <label for="exampleInputAge" class="form-label ">Age:</label>
+                                            </Col>
+                                            <br/>
+                                            <Col sm={9}>
+                                            <input  type="text" class="form-control addPet-info" id="exampleInputAge"/>
+                                            </Col>
+                                        </Row> 
                                     </FormGroup>
-                                    <FormGroup row>
-                                        <label for="exampleInputkg" sm={2} class="form-label">Weight:</label>
-                                        <br/>
-                                        <Col sm={10}>
-                                        <input  type="text" class="form-control " id="exampleInputkg"/>
-                                        </Col>
+                                    <FormGroup>
+                                        <Row>
+                                            <Col sm={3}>
+                                                <label for="exampleInpuWeight" class="form-label">Weight:</label>
+                                            </Col>
+                                            <br/>
+                                            <Col sm={9}>
+                                            <input  type="text" class="form-control addPet-info" id="exampleInputWeight"/>
+                                            </Col>
+                                        </Row> 
                                     </FormGroup>
                                 </form>
                             </ModalBody>

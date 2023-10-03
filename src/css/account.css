@@ -72,6 +72,10 @@
     border: solid #952322 2px;
 }
 
-#exampleInputName {
+.addPet-info {
     width: 100% !important;
+}
+
+.account-container{
+    height: 100%;
 }
