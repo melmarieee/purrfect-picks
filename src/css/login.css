@@ -1,11 +1,8 @@
 .login-page{
-    padding: 0 30px 40px;
-    margin-top: -20px;
+    background-color: white;
     font-family: 'Dm Sans';
 }
 .login-container{
-    background-color: white;
-    border-radius: 20px;
     display: flex;
 }
 .purrpicks-logo-container{
@@ -21,17 +18,21 @@
 
 .login-form-container{
     width: 100%;
-    padding: 30px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
+    background-color: white;
+
 }
 .login-hero-container{
-    background-image: url(../assets/login-hero-img.png);
-    background-size: cover;
-    width: 100%;
-    border-radius: 0 20px 20px 0;
+    text-align: center;
+    background-size: 10px;
+    background-color: cadetblue;
+    width: 60%;
+    /* border-radius: 0 20px 20px 0; */
+    height:100vh;
+
 }
 
 .login-input-container{
@@ -61,7 +62,9 @@
 .login-checkbox{
     margin-right: 5px;
 }
-
+.image_dog {
+    height: 100%;
+}
 @media screen and (max-width: 768px) {
     .login-hero-container{
         display: none;

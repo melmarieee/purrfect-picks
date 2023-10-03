@@ -5,6 +5,8 @@ import purfectlogo from '../assets/purfectLogo.png'
 import sixtoh from '../assets/sixtoh.jpeg'
 import kendra from '../assets/kendra.jpeg'
 import kaori from '../assets/kaori.jpg'
+import right_image from '../assets/image_right.png'
+
 
 import { useState } from 'react'
 
@@ -137,32 +139,31 @@ const Login = () => {
 <>
     <div className="login-page">
         <div className="login-container">
-            <div className="login-form-container">
+            <div className="login-form-container pt-5">
 
                 <div className="purrpicks-logo-container">
-                    <a href="/"><img src={purfectlogo} alt="purrfect-picks-logo" className="purrfectpicks-logo"/></a>
+                    <a href="/"><img src={purfectlogo} alt="purrfect-picks-logo" className="purrfectpicks-logo img-fluid"/></a>
                 </div>
 
                 <form onSubmit={handleSubmit} className="form-section" validate>
-                    
                     <div className='form-header'>
-                        <h2><b>Welcome Back Hooman!</b></h2>
-                        <p className="form-header-instruction">Please enter your details</p>
+                        <h1><b>Welcome Back Hooman!</b></h1>
+                        <p className="form-header-instruction text-secondary mb-3">Please enter your details</p>
                     </div>
                     <div className='login-input-container'>
-                        <label for="validationCustomUsername" className="login-label"><b>Email</b></label>
-                        <input onChange={changeEmail.bind(this)} type="text" className="login-input" id="validationCustomUsername" 
+                        <label for="validationCustomUsername" className="login-label py-2"><b>Email</b></label>
+                        <input onChange={changeEmail.bind(this)} type="text" className="login-input form-control py-2" id="validationCustomUsername" 
                         placeholder='yourname@gmail.com'
                         aria-describedby="inputGroupPrepend" required/>
                     </div>
                     <br/>
                     <div  className='login-input-container'>
                         <label for="validationCustom04" className="login-label"><b>Password</b></label>
-                        <input onChange={changePassword.bind(this)} type="password" className="login-input" placeholder="input your assword"/>
+                        <input onChange={changePassword.bind(this)} type="password" className="login-input form-control py-2" placeholder="input your assword"/>
                     </div>
                     <div>
                     <div className="login-input-checkbox-container">
-                        <input className="login-checkbox" type="checkbox" value="" id="invalidCheck" placeholder="please enter your password"/>
+                        <input className="login-checkbox text-secondary" type="checkbox" value="" id="invalidCheck" placeholder="please enter your password"/>
                         <label className="login-checkbox-label" for="invalidCheck">Remember me</label>
                     </div>
                     </div>
@@ -174,14 +175,15 @@ const Login = () => {
                 <div className="login-to-signup-container">
                     <span>Don't have an account? <a href="/signup">Sign Up</a></span>
                 </div>
-
             </div>
 
-            <div className="login-hero-container"></div>
-
+            {/* <div class="height-hero-container"> */}
+                <div className="login-hero-container">
+                    <img src={right_image} className='img-fluid image_dog'/>
+                </div>
+            {/* </div> */}
         </div>
     </div>
-    <Footer/>
 </>
     )
 }
