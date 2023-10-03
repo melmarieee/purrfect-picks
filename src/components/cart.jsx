@@ -251,7 +251,7 @@ const Carts = () => {
                                 <div>
                                     <h4>Payment Method</h4>
                                     <div class="form-check p-3">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"checked/>
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"/>
                                         <label class="form-check-label" for="flexRadioDefault1">
                                             Gcash
                                         </label>
@@ -263,7 +263,7 @@ const Carts = () => {
                                         </label>
                                     </div>
                                     <div class="form-check p-3">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" />
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked/>
                                         <label class="form-check-label" for="flexRadioDefault2">
                                             Cash On Delivery
                                         </label>
