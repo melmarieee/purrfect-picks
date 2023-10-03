@@ -22,7 +22,7 @@ import accessory6 from '../assets/accessory6.png'
 import accessory7 from '../assets/accessory7.png'
 import accessory8 from '../assets/accessory8.png'
 
-import { Button, Modal, ModalHeader, ModalFooter, ModalBody } from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalFooter, ModalBody, FormGroup, Label, Col, Input } from 'reactstrap';
 
 let xBtn = document.getElementsByClassName('fa-xmark');
 
@@ -141,6 +141,7 @@ const Products = (props) => {
   const [modal, setModal] = useState(false);
   const [activeModalData, setActiveModalData] = useState(null);
   const [alert, setAlert] = useState(null);
+  const [filteredProduct, setFilteredProduct] = useState(product_data);
     
     const toggleModalClose = () => {
       setModal(!modal)
@@ -149,6 +150,20 @@ const Products = (props) => {
     const toggleModaOpen = (product) => {
       setActiveModalData(product)
       setModal(!modal)
+    }
+
+    const searchProduct = (event) => {
+      let new_filtered_product = []
+
+      product_data.map(
+        (product) => {
+          if (product.title.toLowerCase().includes(event.target.value.toLowerCase())) { 
+            new_filtered_product.push(product)
+          }
+        }
+      )
+      console.log(new_filtered_product)
+      setFilteredProduct(new_filtered_product)
     }
 
     const addToCart = () => {
@@ -189,7 +204,6 @@ const Products = (props) => {
               <p>We create healthy, well-balanced, organic<br/> and animal safe products for your furry friends</p>    
             </div>
             <img src={prodsHeroImg} alt="purrfect-picks-hero-img" id='prodHeroImg'/>
-            
           </div>
         <Header/>
       <div>
@@ -215,14 +229,21 @@ const Products = (props) => {
                     Cancel
                 </Button>
                 <button onClick={addToCart.bind(this)} id='addtoCartButton' name="addToCart">Add to cart</button>
-
             </ModalFooter>
         </Modal>
         <main class="products-section">
           <div class="container">
+            <div class="product-filter px-3 pt-3 pb-1 mb-4">
+              <FormGroup row>
+                <Label for="searchProduct" md={1}>Search:</Label>
+                <Col md={11}>
+                  <Input id="searchProduct" onChange={searchProduct.bind(this)} type="email" name="email" placeholder="Search product" />
+                </Col>
+              </FormGroup>
+            </div>
             <div class="products-container">
                 {
-                  product_data.map(
+                  filteredProduct.map(
                     (product, _) => 
                       <div class="product dog-products" data-name="p-1" data-item="dog-products">
                         <img src={product.img} alt=""/>
