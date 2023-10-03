@@ -124,9 +124,10 @@ const Carts = () => {
                 
                 <div>
                     <div class='row'>
-                        <h1 class={carts.length == 0 ? "d-none" : "pt-5"}>My Cart 
+                        <h3 class={carts.length == 0 ? "d-none" : "pt-5 px-3 mx-2"}>My Cart 
                             <MDBIcon className="text-dark fa-1x mx-3" fas icon="cart-shopping" /> 
-                        </h1>
+                        </h3>
+                        <hr class="m-4"/>
                         {checkCart}
                         <div class="col-md-9">
                             {

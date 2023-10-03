@@ -48,7 +48,7 @@ const Index = () => {
         }}
         navigation={true}
         modules={[EffectFade,Autoplay, Pagination, Navigation]}
-        className="mySwiper"
+        className="mySwiper pt-5"
       >
         <SwiperSlide>
           <a href="/products">

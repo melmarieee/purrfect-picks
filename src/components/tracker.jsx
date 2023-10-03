@@ -43,7 +43,7 @@ function Tracker() {
      <Header/>
         {checkCart}
         <section
-          className={`h-100 ${trackings.carts.length == 0 ? "d-none" : ""}`}
+          className={`h-100 ${trackings.carts.length == 0 ? "d-none" : "pt-5"}`}
           style={{ backgroundColor: "#eee" }}
         >
           <MDBContainer className="py-5 h-100">

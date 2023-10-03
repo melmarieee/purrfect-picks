@@ -195,7 +195,7 @@ const Products = (props) => {
     }
 
     return(
-      <div className='prods'>
+      <div className='prods pt-5'>
         <div className="hero-prods-container">
             <div className='prods-hero-texts'>
               <h1>Quality Products Create<br/>

@@ -301,7 +301,7 @@ const change_color_filter = (filter) => {
   }
 }
   return(
-  <div className='subs'>
+  <div className='subs pt-5'>
     <Header/>
     <div className="hero-subs-container">
               <img src={subsHeroImg} alt="purrfect-picks-subs-img" id='prodSubsImg'/>
