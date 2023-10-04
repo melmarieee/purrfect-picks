@@ -1,5 +1,5 @@
 .login-page{
-    background-color: white;
+background-color: white;
     font-family: 'Dm Sans';
 }
 .login-container{
@@ -20,9 +20,11 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    /* padding-left: 100px; */
+    /* padding-right: 30px; */
     /* justify-content: center; */
     align-items: center;
-    background-color: white;
+    background-color: #E9E9E9;
 
 }
 .login-hero-container{

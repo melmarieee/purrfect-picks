@@ -1,79 +1,150 @@
-body{
-    background-color: #E9E9E9;
-}
-.signup-page{
-    padding: 0 30px 40px;
-    margin-top: -20px;
-    font-family: 'Dm Sans';
-}
-.signup-container{
-    background-color: white;
-    border-radius: 20px;
-    display: flex;
-}
-.purrpicks-logo-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.purrfectpicks-logo{
-    width: 200px;
-    margin: 20px 0;
+.signup{
+
+    margin-top: -60px;
+
 }
 
-.signup-form-container{
-    width: 100%;
-    padding: 0px 30px 30px 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.signup-hero-container{
-    background-image: url(../assets/signup-hero-img.png);
-    background-size: cover;
-    width: 100%;
-    border-radius: 20px 0 0 20px;
-}
+.buttonsubmit{
 
-.signup-input-container{
-    display: flex;
-    flex-direction: column;
-    margin-block: 10px;
-}
-.signup-input{
-    height: 35px;
-    border-radius: 5px;
-    border: 1px solid #a7a7a7;
-}
-.signup-checkbox-label{
-    margin: 15px 0 5px;
-}
-.signup-submit-button{
-    background-color: cadetblue;
+    text-align: center;
+
+    background-color: #229495 !important;
+
     border: none;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    height: 35px;
-    width: 100%;
+
+    border-radius:20px;
+
+    width: 130px;
+
+    padding-block: 3px;
+
+}
+
+
+
+
+body{
+
+    background-color:#E9E9E9;
+
+
+}
+
+
+
+
+/* .image-login{
+
+    padding: 30px 30px;
+
+} */
+
+
+
+
+.logo-container{
+
+    height: 50px;
+
+    justify-content: left !important;
+
+}
+
+.signup-image-container{
+
+
+
+
+
+
+
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 30px;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+.image-left-container{
+
+    background-color: #229495;
+
+
+}
+
+.bottom-pic-container {
+
+    align-items: flex-start;
+
+    display: flex;
+
+    justify-content: center;
+
+
+}
+
+.signup-img{
+    height:100vh;
+    width: 70%;
+}
+
+.sign-in-btn{
+
+    border: solid 1px #868686 ;
+
+    border-radius: 10px !important;
+
+}
+
+.sign-in-btn:hover{
+
+    background-color: #229495;
+
+
+
+
+
+
     color: #FFF;
+
+    border: solid 1px #229495 ;
+
+
+
+
+
+
 }
-.signup-submit-button:hover{
-    background-color: #952322;
-}
-.signup-checkbox{
-    margin-right: 5px;
-}
+
 @media screen and (max-width: 768px) {
-    .signup-hero-container{
+
+    .signup-image-container, .image-left-container{
+
         display: none;
+
     }
-    .signup-input{
-        height: 30px;;
+
+    .row{
+
+        display: flex;
+
+        flex-direction: column;
+
+
+
+
+
     }
+
 }
-@media screen and (max-width: 420px) {
-    .signup-input{
-        height: 20px;;
-    }
+
+.padding_form {
+    padding-left: 100px;
+    padding-right: 100px;
 }

@@ -5,7 +5,7 @@ import purfectlogo from '../assets/purfectLogo.png'
 import sixtoh from '../assets/sixtoh.jpeg'
 import kendra from '../assets/kendra.jpeg'
 import kaori from '../assets/kaori.jpg'
-import right_image from '../assets/image_right.png'
+import right_image from '../assets/login_bg.png'
 
 
 import { useState } from 'react'
@@ -141,7 +141,7 @@ const Login = () => {
         <div className="login-container">
             <div className="login-form-container pt-5">
 
-                <div className="purrpicks-logo-container">
+                <div className="purrpicks-logo-container my-5">
                     <a href="/"><img src={purfectlogo} alt="purrfect-picks-logo" className="purrfectpicks-logo img-fluid"/></a>
                 </div>
 
@@ -157,7 +157,7 @@ const Login = () => {
                         aria-describedby="inputGroupPrepend" required/>
                     </div>
                     <br/>
-                    <div  className='login-input-container'>
+                    <div  className='login-input-container pb-2'>
                         <label for="validationCustom04" className="login-label"><b>Password</b></label>
                         <input onChange={changePassword.bind(this)} type="password" className="login-input form-control py-2" placeholder="input your assword"/>
                     </div>
